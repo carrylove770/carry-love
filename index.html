@@ -3969,25 +3969,28 @@ message +=
         function showSizeGuide() {
 
 
-    if (!selectedProduct) {
-
-        return;
-
-    }
-
-
     if (
-        selectedProduct.category === 'Zapatillas'
+        !selectedProduct ||
+        !selectedProduct.sizeGuide
     ) {
 
-        window.open(
-            'images/guia-talles-zapatillas.jpg.jpeg',
-            '_blank'
+
+        alert(
+            'La guía de talles estará disponible próximamente.'
         );
+
 
         return;
 
     }
+
+
+    window.open(
+        selectedProduct.sizeGuide,
+        '_blank'
+    );
+
+}
 
 
     alert(
