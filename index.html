@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
     <meta charset="UTF-8">
@@ -13,7 +14,9 @@
     <title>Carry Love | Zapatillas, Indumentaria y Accesorios</title>
 
 
-    <!-- TIPOGRAFÍAS -->
+    <!-- =====================================================
+         TIPOGRAFÍAS
+    ===================================================== -->
 
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
@@ -1394,10 +1397,6 @@
 
         /* =====================================================
            HEADER MOBILE
-           
-           IMPORTANTE:
-           TODO LO MOBILE ESTÁ AISLADO.
-           NO AFECTA LA COMPUTADORA.
         ===================================================== */
 
         .mobile-header {
@@ -1420,9 +1419,6 @@
 
         @media (max-width: 1000px) {
 
-
-            /* OCULTAR SIDEBAR DESKTOP */
-
             .sidebar {
 
                 display: none;
@@ -1430,16 +1426,12 @@
             }
 
 
-            /* MAIN SIN MARGEN */
-
             main {
 
                 margin-left: 0;
 
             }
 
-
-            /* HEADER MOBILE */
 
             .mobile-header {
 
@@ -1508,10 +1500,6 @@
 
             }
 
-
-            /* =================================================
-               MENU MOBILE
-            ================================================= */
 
             .mobile-menu {
 
@@ -1650,10 +1638,6 @@
             }
 
 
-            /* =================================================
-               HERO MOBILE
-            ================================================= */
-
             .hero {
 
                 padding-top: 110px;
@@ -1663,10 +1647,6 @@
             }
 
 
-            /* =================================================
-               PRODUCTOS
-            ================================================= */
-
             .products-grid {
 
                 grid-template-columns:
@@ -1674,10 +1654,6 @@
 
             }
 
-
-            /* =================================================
-               COMO TRABAJAMOS
-            ================================================= */
 
             .how-grid {
 
@@ -1687,10 +1663,6 @@
             }
 
 
-            /* =================================================
-               INFO
-            ================================================= */
-
             .info-grid {
 
                 grid-template-columns:
@@ -1698,10 +1670,6 @@
 
             }
 
-
-            /* =================================================
-               MODAL
-            ================================================= */
 
             .product-modal-grid {
 
@@ -1718,7 +1686,6 @@
         ===================================================== */
 
         @media (max-width: 650px) {
-
 
             section {
 
@@ -2333,8 +2300,6 @@
             </div>
 
 
-            <!-- AVISO DE PACIENCIA -->
-
             <div class="patience-box">
 
 
@@ -2730,6 +2695,7 @@
 
 
                     <button
+                        type="button"
                         class="guide-button"
                         onclick="showSizeGuide()">
 
@@ -2739,6 +2705,7 @@
 
 
                     <button
+                        type="button"
                         class="add-cart-modal"
                         onclick="addSelectedProductToCart()">
 
@@ -2931,60 +2898,68 @@
                         </option>
 
                     </select>
-                    
-                    <div class="form-group">
 
-                        <label>
+                </div>
 
-                            Forma de pago
+
+                <div class="form-group">
+
+
+                    <label>
+
+                        Forma de pago
+
+                    </label>
+
+
+                    <div class="shipping-options">
+
+
+                        <label class="shipping-option">
+
+                            <input
+                                type="radio"
+                                name="paymentMethod"
+                                value="Tarjeta"
+                                checked>
+
+                            💳 Tarjeta de crédito
 
                         </label>
 
-                        <div class="shipping-options">
 
-                            <label class="shipping-option">
+                        <label class="shipping-option">
 
-                                <input
-                                    type="radio"
-                                    name="paymentMethod"
-                                    value="Tarjeta"
-                                    checked>
+                            <input
+                                type="radio"
+                                name="paymentMethod"
+                                value="Transferencia">
 
-                                💳 Tarjeta de crédito
+                            💸 Transferencia bancaria
+                            — 15% OFF
 
-                            </label>
+                        </label>
 
-                            <label class="shipping-option">
 
-                                <input
-                                    type="radio"
-                                    name="paymentMethod"
-                                    value="Transferencia">
+                        <label class="shipping-option">
 
-                                💸 Transferencia bancaria
-                                — 15% OFF
+                            <input
+                                type="radio"
+                                name="paymentMethod"
+                                value="Efectivo">
 
-                            </label>
+                            💵 Efectivo
+                            — 15% OFF
 
-                            <label class="shipping-option">
-
-                                <input
-                                    type="radio"
-                                    name="paymentMethod"
-                                    value="Efectivo">
-
-                                💵 Efectivo
-                                — 15% OFF
-
-                            </label>
-
-                        </div>
+                        </label>
 
                     </div>
+
                 </div>
 
 
                 <button
+                    type="button"
                     class="whatsapp-button"
                     onclick="sendOrderToWhatsApp()">
 
@@ -3009,78 +2984,80 @@
         /* =====================================================
            PRODUCTOS
 
-           MÁS ADELANTE VAMOS A CARGARLOS ACÁ.
+           PARA AGREGAR PRODUCTOS MÁS ADELANTE,
+           SOLO VAMOS A MODIFICAR ESTA PARTE.
         ===================================================== */
 
-    const products = [
+        const products = [
 
-    {
-        id: 1,
+            {
+                id: 1,
 
-        name: "New Balance 9060",
+                name: "New Balance 9060",
 
-        category: "Zapatillas",
+                category: "Zapatillas",
 
-        price: 82000,
-        discountTransfer: 15,
+                price: 82000,
 
-        image: "images/newbalancebordo2.jpg",
+                discountTransfer: 15,
 
-        description:
-            "Nuevas New Balance bordo premium.",
+                image: "images/newbalancebordo2.jpg",
 
-        sizes: [
-            "34",
-            "36",
-            "37",
-            "38",
-            "39/40"
-        ],
+                description:
+                    "Nuevas New Balance bordo premium.",
 
-        colors: [
-            "Bordo"
-        ],
+                sizes: [
+                    "34",
+                    "36",
+                    "37",
+                    "38",
+                    "39/40"
+                ],
 
-                sizeGuide: ""
+                colors: [
+                    "Bordo"
+                ],
 
-    },
+                sizeGuide:
+                    "images/guia-talles-zapatillas.jpg.jpeg"
+            },
 
 
-    {
-        id: 2,
+            {
+                id: 2,
 
-        name: "Vans Hylane",
+                name: "Vans Hylane",
 
-        category: "Zapatillas",
+                category: "Zapatillas",
 
-        price: 82000,
+                price: 82000,
 
-        discountTransfer: 15,
+                discountTransfer: 15,
 
-        image: "images/vanshylane.jpg",
+                image: "images/vanshylane.jpg",
 
-        description:
-            "Vans negro con blanco.",
+                description:
+                    "Vans negro con blanco.",
 
-        sizes: [
-            "38",
-            "39",
-            "40",
-            "41",
-            "42",
-            "43",
-            "44"
-        ],
+                sizes: [
+                    "38",
+                    "39",
+                    "40",
+                    "41",
+                    "42",
+                    "43",
+                    "44"
+                ],
 
-        colors: [
-            "Negro"
-        ],
+                colors: [
+                    "Negro"
+                ],
 
-        sizeGuide: ""
+                sizeGuide:
+                    "images/guia-talles-zapatillas.jpg.jpeg"
+            }
 
-    }
-
-];
+        ];
 
 
         /* =====================================================
@@ -3111,11 +3088,10 @@
 
 
         /* =====================================================
-           PRODUCTOS
+           MOSTRAR PRODUCTOS
         ===================================================== */
 
         function renderProducts(list = products) {
-
 
             const grid =
                 document.getElementById(
@@ -3124,7 +3100,6 @@
 
 
             if (list.length === 0) {
-
 
                 grid.innerHTML = `
 
@@ -3156,7 +3131,6 @@
                     </div>
 
                 `;
-
 
                 return;
 
@@ -3221,20 +3195,27 @@
 
                                 ${formatPrice(product.price)}
 
-                                 <br>
+                                <br>
 
-                                 <span style="
-                                font-size: 13px;
-                                color: #6b4a38;
-                                 ">
-                                15% OFF pagando por transferencia o efectivo:
-                                 ${formatPrice(product.price * 0.85)}
+                                <span style="
+                                    font-size: 13px;
+                                    color: #6b4a38;
+                                ">
+
+                                    15% OFF pagando por
+                                    transferencia o efectivo:
+
+                                    ${formatPrice(
+                                        product.price * 0.85
+                                    )}
+
                                 </span>
 
                             </div>
 
 
                             <button
+                                type="button"
                                 class="product-button"
                                 onclick="
                                     openProductModal(
@@ -3262,7 +3243,6 @@
 
         function filterProducts(category) {
 
-
             const filtered =
                 products.filter(
                     product =>
@@ -3288,7 +3268,6 @@
         ===================================================== */
 
         function openProductModal(id) {
-
 
             selectedProduct =
                 products.find(
@@ -3335,36 +3314,6 @@
             ).textContent =
                 selectedProduct.description || '';
 
-                        const sizeGuideContainer =
-                document.getElementById(
-                    'sizeGuideContainer'
-                );
-
-
-            if (
-                selectedProduct.category === 'Zapatillas'
-            ) {
-
-                sizeGuideContainer.innerHTML = `
-
-                    <button
-                        type="button"
-                        class="size-guide-button"
-                        onclick="openSizeGuide()">
-
-                        📐 VER GUÍA DE TALLES
-
-                    </button>
-
-                `;
-
-            }
-
-            else {
-
-                sizeGuideContainer.innerHTML = '';
-
-            }
 
             const sizeSelect =
                 document.getElementById(
@@ -3417,7 +3366,6 @@
 
         function closeProductModal() {
 
-
             document.getElementById(
                 'productModal'
             ).classList.remove('active');
@@ -3426,11 +3374,10 @@
 
 
         /* =====================================================
-           AGREGAR PRODUCTO
+           AGREGAR PRODUCTO AL CARRITO
         ===================================================== */
 
         function addSelectedProductToCart() {
-
 
             if (!selectedProduct) {
 
@@ -3504,7 +3451,6 @@
 
         function updateCart() {
 
-
             const container =
                 document.getElementById(
                     'cartItems'
@@ -3525,7 +3471,6 @@
 
 
             if (cart.length === 0) {
-
 
                 container.innerHTML = `
 
@@ -3605,6 +3550,7 @@
 
 
                                 <button
+                                    type="button"
                                     onclick="
                                         changeQuantity(
                                             ${index},
@@ -3625,6 +3571,7 @@
 
 
                                 <button
+                                    type="button"
                                     onclick="
                                         changeQuantity(
                                             ${index},
@@ -3641,6 +3588,7 @@
 
 
                             <button
+                                type="button"
                                 class="remove-item"
                                 onclick="
                                     removeItem(
@@ -3684,7 +3632,6 @@
             amount
         ) {
 
-
             cart[index].quantity += amount;
 
 
@@ -3706,7 +3653,6 @@
 
         function removeItem(index) {
 
-
             cart.splice(index, 1);
 
             saveCart();
@@ -3718,7 +3664,6 @@
 
         function openCart() {
 
-
             document.getElementById(
                 'cartPanel'
             ).classList.add('open');
@@ -3727,7 +3672,6 @@
 
 
         function closeCart() {
-
 
             document.getElementById(
                 'cartPanel'
@@ -3742,14 +3686,11 @@
 
         function openCheckout() {
 
-
             if (cart.length === 0) {
-
 
                 alert(
                     'Tu carrito está vacío.'
                 );
-
 
                 return;
 
@@ -3765,7 +3706,6 @@
 
         function closeCheckout() {
 
-
             document.getElementById(
                 'checkoutModal'
             ).classList.remove('active');
@@ -3778,7 +3718,6 @@
         ===================================================== */
 
         function sendOrderToWhatsApp() {
-
 
             const name =
                 document.getElementById(
@@ -3814,6 +3753,8 @@
                 document.getElementById(
                     'deliveryMethod'
                 ).value;
+
+
             const paymentElement =
                 document.querySelector(
                     'input[name="paymentMethod"]:checked'
@@ -3832,17 +3773,16 @@
                     ? 15
                     : 0;
 
+
             if (
                 !name ||
                 !address ||
                 !city
             ) {
 
-
                 alert(
                     'Por favor completá tu nombre, dirección y localidad.'
                 );
-
 
                 return;
 
@@ -3856,22 +3796,17 @@
             cart.forEach(
                 (item, index) => {
 
-
                     message +=
                         `${index + 1}. ${item.product.name}\n`;
-
 
                     message +=
                         `Talle: ${item.size}\n`;
 
-
                     message +=
                         `Color: ${item.color}\n`;
 
-
                     message +=
                         `Cantidad: ${item.quantity}\n`;
-
 
                     message +=
                         `Precio unitario: ${formatPrice(
@@ -3883,40 +3818,47 @@
 
 
             const subtotal =
-                    cart.reduce(
+                cart.reduce(
                     (sum, item) =>
-                    sum +
-                    (
-                      item.product.price *
-                      item.quantity
-            ),
-        0
-    );
+                        sum +
+                        (
+                            item.product.price *
+                            item.quantity
+                        ),
+                    0
+                );
 
 
-const discountAmount =
-    subtotal * (discountRate / 100);
+            const discountAmount =
+                subtotal *
+                (discountRate / 100);
 
 
-const total =
-    subtotal - discountAmount;
+            const total =
+                subtotal -
+                discountAmount;
 
 
-           message +=
-    `Forma de pago: ${payment}\n`;
+            message +=
+                `Forma de pago: ${payment}\n`;
 
-message +=
-    `Subtotal: ${formatPrice(subtotal)}\n`;
 
-if (discountAmount > 0) {
+            message +=
+                `Subtotal: ${formatPrice(subtotal)}\n`;
 
-    message +=
-        `Descuento: 15% OFF (-${formatPrice(discountAmount)})\n`;
 
-}
+            if (discountAmount > 0) {
 
-message +=
-    `TOTAL: ${formatPrice(total)}\n\n`;
+                message +=
+                    `Descuento: 15% OFF (-${formatPrice(
+                        discountAmount
+                    )})\n`;
+
+            }
+
+
+            message +=
+                `TOTAL: ${formatPrice(total)}\n\n`;
 
 
             message +=
@@ -3964,40 +3906,33 @@ message +=
 
         /* =====================================================
            GUIA DE TALLES
+           
+           TODAS LAS ZAPATILLAS UTILIZAN LA MISMA
+           IMAGEN DE GUIA DE TALLES.
         ===================================================== */
 
         function showSizeGuide() {
 
+            if (
+                !selectedProduct ||
+                !selectedProduct.sizeGuide
+            ) {
 
-    if (
-        !selectedProduct ||
-        !selectedProduct.sizeGuide
-    ) {
+                alert(
+                    'La guía de talles estará disponible próximamente.'
+                );
 
+                return;
 
-        alert(
-            'La guía de talles estará disponible próximamente.'
-        );
-
-
-        return;
-
-    }
+            }
 
 
-    window.open(
-        selectedProduct.sizeGuide,
-        '_blank'
-    );
+            window.open(
+                selectedProduct.sizeGuide,
+                '_blank'
+            );
 
-}
-
-
-    alert(
-        'La guía de talles estará disponible próximamente.'
-    );
-
-}
+        }
 
 
         /* =====================================================
@@ -4005,7 +3940,6 @@ message +=
         ===================================================== */
 
         function saveCart() {
-
 
             localStorage.setItem(
                 'carryLoveCart',
@@ -4017,7 +3951,6 @@ message +=
 
         function loadCart() {
 
-
             const saved =
                 localStorage.getItem(
                     'carryLoveCart'
@@ -4025,7 +3958,6 @@ message +=
 
 
             if (saved) {
-
 
                 try {
 
@@ -4054,13 +3986,11 @@ message +=
 
         function scrollToSection(id) {
 
-
             const section =
                 document.getElementById(id);
 
 
             if (section) {
-
 
                 section.scrollIntoView({
                     behavior: 'smooth'
@@ -4076,7 +4006,6 @@ message +=
         ===================================================== */
 
         function toggleMobileMenu() {
-
 
             const menu =
                 document.getElementById(
@@ -4099,7 +4028,6 @@ message +=
 
 
         function closeMobileMenu() {
-
 
             const menu =
                 document.getElementById(
@@ -4125,7 +4053,6 @@ message +=
             sectionId
         ) {
 
-
             closeMobileMenu();
 
             scrollToSection(
@@ -4139,7 +4066,6 @@ message +=
             category
         ) {
 
-
             closeMobileMenu();
 
             filterProducts(
@@ -4150,13 +4076,12 @@ message +=
 
 
         /* =====================================================
-           CERRAR MENUS/MODALES AL TOCAR AFUERA
+           CERRAR MENUS / MODALES AL TOCAR AFUERA
         ===================================================== */
 
         document.addEventListener(
             'click',
             function(event) {
-
 
                 const productModal =
                     document.getElementById(
@@ -4201,12 +4126,10 @@ message +=
             'keydown',
             function(event) {
 
-
                 if (
                     event.key ===
                     'Escape'
                 ) {
-
 
                     closeProductModal();
 
@@ -4230,11 +4153,9 @@ message +=
             'DOMContentLoaded',
             function() {
 
-
                 renderProducts();
 
                 loadCart();
-
 
             }
         );
@@ -4243,4 +4164,5 @@ message +=
 
 
 </body>
+
 </html>
