@@ -804,7 +804,71 @@
                 font-size: 25px;
                 cursor: pointer;
             }
+.mobile-menu {
+    position: fixed;
+    top: 65px;
+    left: -100%;
+    width: 280px;
+    max-width: 85%;
+    height: calc(100vh - 65px);
+    background: #111111;
+    z-index: 1400;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    box-shadow: 10px 0 30px rgba(0,0,0,0.25);
+    transition: left 0.3s ease;
+}
 
+.mobile-menu.open {
+    left: 0;
+}
+
+.mobile-menu button {
+    border: none;
+    background: transparent;
+    color: #eeeeee;
+    padding: 15px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.mobile-menu button:hover {
+    background: #292929;
+    color: white;
+}
+
+.mobile-category-title {
+    color: #9a7257;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    padding: 20px 15px 8px;
+}
+
+.mobile-socials {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 15px;
+}
+
+.mobile-socials a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.mobile-socials a:hover {
+    color: #9a7257;
+}
             .hero {
                 padding-top: 110px;
                 min-height: 600px;
@@ -869,8 +933,64 @@
 
 <header class="mobile-header">
     <div class="mobile-logo">Carry Love</div>
-    <button class="mobile-menu-button" onclick="toggleMobileMenu()">☰</button>
+
+    <button class="mobile-menu-button"
+            onclick="toggleMobileMenu()"
+            aria-label="Abrir menú">
+        ☰
+    </button>
 </header>
+
+<div id="mobileMenu" class="mobile-menu">
+
+    <button onclick="mobileNavigate('inicio')">
+        🏠 Inicio
+    </button>
+
+    <div class="mobile-category-title">
+        CATEGORÍAS
+    </div>
+
+    <button onclick="mobileFilter('Zapatillas')">
+        👟 Zapatillas
+    </button>
+
+    <button onclick="mobileFilter('Indumentaria')">
+        👕 Indumentaria
+    </button>
+
+    <button onclick="mobileFilter('Accesorios')">
+        👜 Accesorios
+    </button>
+
+    <button onclick="mobileNavigate('como-trabajamos')">
+        🤎 Cómo trabajamos
+    </button>
+
+    <button onclick="openCart(); closeMobileMenu()">
+        🛒 Carrito
+    </button>
+
+    <div class="mobile-socials">
+
+        <a href="https://www.instagram.com/carteras_carrylove"
+           target="_blank">
+            Instagram
+        </a>
+
+        <a href="https://www.facebook.com/share/1Yc6i8rMRu/?mibextid=wwXIfr"
+           target="_blank">
+            Facebook
+        </a>
+
+        <a href="https://www.tiktok.com/@carry.love.carter"
+           target="_blank">
+            TikTok
+        </a>
+
+    </div>
+
+</div>
 
 
 <!-- =========================
@@ -2263,11 +2383,38 @@
 
     function toggleMobileMenu() {
 
-        alert(
-            'Menú móvil: lo vamos a terminar de ajustar en la próxima versión.'
-        );
+    const menu = document.getElementById('mobileMenu');
 
-    }
+    menu.classList.toggle('open');
+
+}
+
+
+function closeMobileMenu() {
+
+    const menu = document.getElementById('mobileMenu');
+
+    menu.classList.remove('open');
+
+}
+
+
+function mobileNavigate(sectionId) {
+
+    closeMobileMenu();
+
+    scrollToSection(sectionId);
+
+}
+
+
+function mobileFilter(category) {
+
+    closeMobileMenu();
+
+    filterProducts(category);
+
+}
 
 
     /* ==================================================
