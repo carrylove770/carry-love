@@ -1,1673 +1,2630 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Carry Love - Zapatillas, indumentaria y accesorios. Zapala, Neuquén. Comprá y coordiná tu pedido por WhatsApp.">
 
     <title>Carry Love | Zapatillas, Indumentaria y Accesorios</title>
 
-    <meta name="description"
-          content="Carry Love - Zapatillas, indumentaria y accesorios. Comprá online y coordiná tu pedido por WhatsApp.">
 
-    <!-- Tipografías -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- TIPOGRAFÍAS -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:wght@300;400;500;600;700&display=swap"
           rel="stylesheet">
 
+
     <style>
 
+        /* =====================================================
+           VARIABLES
+        ===================================================== */
+
         :root {
+
             --brown: #9a7257;
             --brown-dark: #684b39;
+
             --black: #111111;
             --soft-black: #1b1b1b;
+
             --white: #ffffff;
+
             --cream: #f7f3ef;
+
             --border: #e5ddd6;
+
         }
+
+
+        /* =====================================================
+           RESET
+        ===================================================== */
 
         * {
+
             margin: 0;
             padding: 0;
+
             box-sizing: border-box;
+
         }
+
 
         html {
+
             scroll-behavior: smooth;
+
         }
 
+
         body {
+
             font-family: 'Montserrat', sans-serif;
+
             background: var(--white);
+
             color: var(--black);
+
         }
+
 
         button,
         input,
         select {
+
             font-family: inherit;
+
         }
 
-        /* =========================
-           SIDEBAR
-        ========================= */
+
+        /* =====================================================
+           SIDEBAR DESKTOP
+        ===================================================== */
 
         .sidebar {
+
             position: fixed;
+
             left: 0;
             top: 0;
+
             width: 250px;
             height: 100vh;
+
             background: var(--black);
+
             color: white;
+
             padding: 35px 25px;
+
             z-index: 1000;
+
             display: flex;
+
             flex-direction: column;
+
         }
+
 
         .logo {
+
             font-family: 'Allura', cursive;
+
             font-size: 58px;
+
             color: var(--brown);
+
             line-height: 1;
+
             text-align: center;
+
             margin-bottom: 50px;
+
         }
+
 
         .menu {
+
             display: flex;
+
             flex-direction: column;
+
             gap: 8px;
+
         }
+
 
         .menu button {
+
             background: transparent;
+
             border: none;
+
             color: #ddd;
+
             padding: 13px 15px;
+
             text-align: left;
+
             cursor: pointer;
+
             border-radius: 8px;
+
             font-size: 14px;
+
             transition: 0.25s;
+
         }
+
 
         .menu button:hover {
+
             background: #292929;
+
             color: white;
+
             transform: translateX(3px);
+
         }
+
 
         .menu .category-title {
+
             color: var(--brown);
+
             font-weight: 600;
+
             margin-top: 15px;
+
             cursor: default;
+
         }
+
 
         .social-sidebar {
+
             margin-top: auto;
+
             display: flex;
+
             justify-content: center;
+
             gap: 12px;
+
         }
+
 
         .social-sidebar a {
+
             color: #aaa;
+
             text-decoration: none;
+
             font-size: 12px;
+
             transition: 0.2s;
+
         }
+
 
         .social-sidebar a:hover {
+
             color: var(--brown);
+
         }
 
-        /* =========================
+
+        /* =====================================================
            MAIN
-        ========================= */
+        ===================================================== */
 
         main {
+
             margin-left: 250px;
+
         }
 
-        /* =========================
+
+        /* =====================================================
            HERO
-        ========================= */
+        ===================================================== */
 
         .hero {
+
             min-height: 650px;
+
             background:
                 linear-gradient(
                     rgba(0,0,0,0.42),
                     rgba(0,0,0,0.42)
                 ),
-                linear-gradient(135deg, #1b1b1b, #594337);
+                linear-gradient(
+                    135deg,
+                    #1b1b1b,
+                    #594337
+                );
 
             display: flex;
+
             align-items: center;
+
             justify-content: center;
+
             text-align: center;
+
             color: white;
+
             padding: 50px;
+
         }
+
 
         .hero-content {
+
             max-width: 800px;
+
         }
+
 
         .hero-small {
+
             text-transform: uppercase;
+
             letter-spacing: 5px;
+
             font-size: 12px;
+
             margin-bottom: 20px;
+
             color: #ddd;
+
         }
+
 
         .hero h1 {
+
             font-family: 'Allura', cursive;
+
             color: var(--brown);
-            font-size: clamp(80px, 12vw, 150px);
+
+            font-size: clamp(
+                80px,
+                12vw,
+                150px
+            );
+
             line-height: 0.9;
+
             font-weight: 400;
+
         }
+
 
         .hero p {
+
             margin: 30px auto;
+
             max-width: 600px;
+
             line-height: 1.8;
+
             color: #eee;
+
         }
+
 
         .hero-button {
+
             display: inline-block;
+
             padding: 15px 32px;
+
             background: var(--brown);
+
             color: white;
+
             border-radius: 50px;
+
             text-decoration: none;
+
             font-size: 13px;
+
             font-weight: 600;
+
             letter-spacing: 1px;
+
             transition: 0.3s;
+
         }
+
 
         .hero-button:hover {
+
             background: white;
+
             color: var(--black);
+
             transform: translateY(-2px);
+
         }
 
-        /* =========================
+
+        /* =====================================================
            SECCIONES
-        ========================= */
+        ===================================================== */
 
         section {
+
             padding: 90px 7%;
+
         }
+
 
         .section-title {
+
             text-align: center;
+
             margin-bottom: 55px;
+
         }
+
 
         .section-title span {
+
             color: var(--brown);
+
             text-transform: uppercase;
+
             letter-spacing: 4px;
+
             font-size: 11px;
+
         }
+
 
         .section-title h2 {
+
             margin-top: 10px;
+
             font-size: 38px;
+
             font-weight: 500;
+
         }
 
-        /* =========================
+
+        /* =====================================================
            PRODUCTOS
-        ========================= */
+        ===================================================== */
 
         .products-grid {
+
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 30px;
+
         }
+
 
         .product-card {
+
             background: white;
+
             border: 1px solid var(--border);
+
             border-radius: 12px;
+
             overflow: hidden;
+
             transition: 0.3s;
+
         }
+
 
         .product-card:hover {
+
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+
+            box-shadow:
+                0 15px 40px
+                rgba(0,0,0,0.08);
+
         }
+
 
         .product-image {
+
             height: 330px;
+
             background: #eee;
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
+
             overflow: hidden;
+
         }
+
 
         .product-image img {
+
             width: 100%;
+
             height: 100%;
+
             object-fit: cover;
+
         }
+
 
         .product-placeholder {
+
             color: #999;
+
             font-size: 13px;
+
         }
+
 
         .product-info {
+
             padding: 22px;
+
         }
+
 
         .product-category {
+
             color: var(--brown);
+
             font-size: 10px;
+
             letter-spacing: 2px;
+
             text-transform: uppercase;
+
         }
+
 
         .product-name {
+
             font-size: 18px;
+
             margin: 8px 0;
+
             font-weight: 600;
+
         }
+
 
         .product-price {
+
             font-size: 19px;
+
             font-weight: 600;
+
             margin-bottom: 18px;
+
         }
+
 
         .product-button {
+
             width: 100%;
+
             border: 1px solid var(--black);
+
             background: var(--black);
+
             color: white;
+
             padding: 13px;
+
             border-radius: 6px;
+
             cursor: pointer;
+
             transition: 0.2s;
+
         }
+
 
         .product-button:hover {
+
             background: var(--brown);
+
             border-color: var(--brown);
+
         }
 
-        /* =========================
+
+        /* =====================================================
            COMO TRABAJAMOS
-        ========================= */
+        ===================================================== */
 
         .how-section {
+
             background: var(--cream);
+
         }
+
 
         .how-grid {
+
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 25px;
+
         }
+
 
         .how-card {
+
             background: white;
+
             padding: 35px 28px;
+
             border-radius: 12px;
+
             border: 1px solid var(--border);
+
         }
+
 
         .how-number {
+
             color: var(--brown);
+
             font-size: 12px;
+
             letter-spacing: 2px;
+
         }
+
 
         .how-card h3 {
+
             margin: 15px 0;
+
             font-size: 18px;
+
         }
+
 
         .how-card p {
+
             color: #666;
+
             line-height: 1.8;
+
             font-size: 14px;
+
         }
+
 
         .patience-box {
+
             margin-top: 40px;
+
             background: var(--black);
+
             color: white;
+
             padding: 35px;
+
             border-radius: 12px;
+
             text-align: center;
+
         }
+
 
         .patience-box h3 {
+
             color: var(--brown);
+
             font-size: 25px;
+
             margin-bottom: 15px;
+
         }
+
 
         .patience-box p {
+
             color: #ddd;
+
             line-height: 1.8;
+
             max-width: 750px;
+
             margin: auto;
+
         }
 
-        /* =========================
+
+        /* =====================================================
            INFORMACION
-        ========================= */
+        ===================================================== */
 
         .info-grid {
+
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 25px;
+
         }
+
 
         .info-card {
+
             border: 1px solid var(--border);
+
             padding: 30px;
+
             border-radius: 12px;
+
         }
+
 
         .info-card h3 {
+
             margin-bottom: 12px;
+
         }
+
 
         .info-card p {
+
             color: #666;
+
             line-height: 1.8;
+
             font-size: 14px;
+
         }
 
-        /* =========================
+
+        /* =====================================================
            FOOTER
-        ========================= */
+        ===================================================== */
 
         footer {
+
             background: var(--black);
+
             color: white;
+
             padding: 60px 7%;
+
             text-align: center;
+
         }
+
 
         footer .footer-logo {
+
             font-family: 'Allura', cursive;
+
             color: var(--brown);
+
             font-size: 60px;
+
         }
+
 
         footer p {
+
             color: #aaa;
+
             margin: 10px 0;
+
             font-size: 13px;
+
         }
+
 
         .footer-socials {
+
             margin-top: 25px;
+
             display: flex;
+
             justify-content: center;
+
             gap: 25px;
+
         }
+
 
         .footer-socials a {
+
             color: white;
+
             text-decoration: none;
+
             font-size: 13px;
+
         }
+
 
         .footer-socials a:hover {
+
             color: var(--brown);
+
         }
 
-        /* =========================
-           CARRITO
-        ========================= */
+
+        /* =====================================================
+           BOTON CARRITO
+        ===================================================== */
 
         .cart-button {
+
             position: fixed;
+
             right: 25px;
+
             bottom: 25px;
+
             width: 58px;
+
             height: 58px;
+
             border-radius: 50%;
+
             border: none;
+
             background: var(--brown);
+
             color: white;
+
             font-size: 20px;
+
             cursor: pointer;
+
             z-index: 1100;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+            box-shadow:
+                0 10px 30px
+                rgba(0,0,0,0.25);
+
         }
+
 
         .cart-count {
+
             position: absolute;
+
             right: -3px;
+
             top: -3px;
+
             background: var(--black);
+
             width: 22px;
+
             height: 22px;
+
             border-radius: 50%;
+
             font-size: 11px;
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
+
         }
+
+
+        /* =====================================================
+           CARRITO
+        ===================================================== */
 
         .cart-panel {
+
             position: fixed;
+
             top: 0;
+
             right: -480px;
+
             width: 450px;
+
             max-width: 95%;
+
             height: 100vh;
+
             background: white;
+
             z-index: 2000;
-            box-shadow: -10px 0 40px rgba(0,0,0,0.2);
+
+            box-shadow:
+                -10px 0 40px
+                rgba(0,0,0,0.2);
+
             transition: 0.35s;
+
             display: flex;
+
             flex-direction: column;
+
         }
+
 
         .cart-panel.open {
+
             right: 0;
+
         }
+
 
         .cart-header {
+
             padding: 25px;
-            border-bottom: 1px solid var(--border);
+
+            border-bottom:
+                1px solid var(--border);
+
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
+
         }
+
 
         .cart-header h2 {
+
             font-size: 20px;
+
         }
+
 
         .close-cart {
+
             border: none;
+
             background: none;
+
             font-size: 25px;
+
             cursor: pointer;
+
         }
+
 
         .cart-items {
+
             flex: 1;
+
             overflow-y: auto;
+
             padding: 20px;
+
         }
+
 
         .empty-cart {
+
             text-align: center;
+
             padding: 60px 20px;
+
             color: #888;
+
         }
+
 
         .cart-item {
-            border-bottom: 1px solid var(--border);
+
+            border-bottom:
+                1px solid var(--border);
+
             padding: 18px 0;
+
         }
+
 
         .cart-item-name {
+
             font-weight: 600;
+
             margin-bottom: 7px;
+
         }
+
 
         .cart-item-details {
+
             font-size: 12px;
+
             color: #777;
+
             line-height: 1.8;
+
         }
+
 
         .quantity-controls {
+
             display: flex;
+
             align-items: center;
+
             gap: 10px;
+
             margin-top: 10px;
+
         }
+
 
         .quantity-controls button {
+
             width: 25px;
+
             height: 25px;
-            border: 1px solid var(--border);
+
+            border:
+                1px solid var(--border);
+
             background: white;
+
             cursor: pointer;
+
         }
+
 
         .remove-item {
+
             margin-top: 10px;
+
             color: #a00;
+
             border: none;
+
             background: none;
+
             cursor: pointer;
+
             font-size: 11px;
+
         }
+
 
         .cart-footer {
+
             padding: 22px;
-            border-top: 1px solid var(--border);
+
+            border-top:
+                1px solid var(--border);
+
         }
+
 
         .cart-total {
+
             display: flex;
+
             justify-content: space-between;
+
             font-size: 18px;
+
             font-weight: 600;
+
             margin-bottom: 18px;
+
         }
+
 
         .checkout-button {
+
             width: 100%;
+
             border: none;
+
             background: var(--black);
+
             color: white;
+
             padding: 15px;
+
             cursor: pointer;
+
             border-radius: 6px;
+
             font-weight: 600;
+
         }
 
-        /* =========================
-           MODAL PRODUCTO
-        ========================= */
+
+        /* =====================================================
+           MODALES
+        ===================================================== */
 
         .modal-overlay {
+
             position: fixed;
+
             inset: 0;
-            background: rgba(0,0,0,0.65);
+
+            background:
+                rgba(0,0,0,0.65);
+
             z-index: 3000;
+
             display: none;
+
             align-items: center;
+
             justify-content: center;
+
             padding: 20px;
+
         }
+
 
         .modal-overlay.active {
+
             display: flex;
+
         }
+
 
         .product-modal {
+
             background: white;
+
             width: 900px;
+
             max-width: 100%;
+
             max-height: 90vh;
+
             overflow-y: auto;
+
             border-radius: 12px;
+
             padding: 30px;
+
             position: relative;
+
         }
+
 
         .modal-close {
+
             position: absolute;
+
             top: 15px;
+
             right: 20px;
+
             border: none;
+
             background: none;
+
             font-size: 25px;
+
             cursor: pointer;
+
+            z-index: 5;
+
         }
+
 
         .product-modal-grid {
+
             display: grid;
-            grid-template-columns: 1fr 1fr;
+
+            grid-template-columns:
+                1fr 1fr;
+
             gap: 35px;
+
         }
+
 
         .modal-product-image {
+
             height: 450px;
+
             background: #eee;
+
             border-radius: 8px;
+
             overflow: hidden;
+
         }
+
 
         .modal-product-image img {
+
             width: 100%;
+
             height: 100%;
+
             object-fit: cover;
+
         }
+
 
         .modal-info h2 {
+
             font-size: 30px;
+
             margin-bottom: 10px;
+
         }
+
 
         .modal-price {
+
             font-size: 23px;
+
             font-weight: 600;
+
             margin: 15px 0 25px;
+
         }
+
 
         .modal-description {
+
             color: #666;
+
             line-height: 1.8;
+
             font-size: 14px;
+
             margin-bottom: 25px;
+
         }
+
 
         .option-label {
+
             display: block;
+
             font-size: 12px;
+
             font-weight: 600;
+
             margin-bottom: 8px;
+
             text-transform: uppercase;
+
             letter-spacing: 1px;
+
         }
+
 
         .option-select {
+
             width: 100%;
+
             padding: 13px;
-            border: 1px solid var(--border);
+
+            border:
+                1px solid var(--border);
+
             margin-bottom: 20px;
+
             background: white;
+
         }
+
 
         .guide-button {
+
             border: none;
+
             background: none;
+
             color: var(--brown-dark);
+
             text-decoration: underline;
+
             cursor: pointer;
+
             margin-bottom: 20px;
+
         }
+
 
         .add-cart-modal {
+
             width: 100%;
+
             background: var(--black);
+
             color: white;
+
             border: none;
+
             padding: 16px;
+
             border-radius: 6px;
+
             cursor: pointer;
+
             font-weight: 600;
+
         }
 
-        /* =========================
+
+        /* =====================================================
            CHECKOUT
-        ========================= */
+        ===================================================== */
 
         .checkout-form {
+
             max-width: 600px;
+
             margin: auto;
+
         }
+
 
         .checkout-form h2 {
+
             margin-bottom: 25px;
+
         }
+
 
         .form-group {
+
             margin-bottom: 16px;
+
         }
 
+
         .form-group label {
+
             display: block;
+
             font-size: 12px;
+
             font-weight: 600;
+
             margin-bottom: 7px;
+
         }
+
 
         .form-group input,
         .form-group select {
+
             width: 100%;
+
             padding: 13px;
-            border: 1px solid var(--border);
+
+            border:
+                1px solid var(--border);
+
             border-radius: 5px;
+
         }
+
 
         .shipping-options {
+
             display: grid;
-            grid-template-columns: 1fr 1fr;
+
+            grid-template-columns:
+                1fr 1fr;
+
             gap: 10px;
+
         }
+
 
         .shipping-option {
-            border: 1px solid var(--border);
+
+            border:
+                1px solid var(--border);
+
             padding: 15px;
+
             border-radius: 6px;
+
             cursor: pointer;
+
         }
+
 
         .shipping-option input {
+
             margin-right: 8px;
+
         }
+
 
         .whatsapp-button {
+
             width: 100%;
+
             border: none;
+
             background: #25D366;
+
             color: white;
+
             padding: 16px;
+
             border-radius: 6px;
+
             font-weight: 700;
+
             cursor: pointer;
+
             margin-top: 10px;
+
         }
 
-        /* =========================
-           MOBILE
-        ========================= */
+
+        /* =====================================================
+           HEADER MOBILE
+           
+           IMPORTANTE:
+           TODO LO MOBILE ESTÁ AISLADO.
+           NO AFECTA LA COMPUTADORA.
+        ===================================================== */
 
         .mobile-header {
+
             display: none;
+
         }
+
+
+        .mobile-menu {
+
+            display: none;
+
+        }
+
+
+        /* =====================================================
+           TABLET / MOBILE
+        ===================================================== */
 
         @media (max-width: 1000px) {
 
+
+            /* OCULTAR SIDEBAR DESKTOP */
+
             .sidebar {
+
                 display: none;
+
             }
+
+
+            /* MAIN SIN MARGEN */
 
             main {
+
                 margin-left: 0;
+
             }
+
+
+            /* HEADER MOBILE */
 
             .mobile-header {
+
                 display: flex;
+
                 position: fixed;
+
                 top: 0;
+
                 left: 0;
+
                 width: 100%;
+
                 height: 65px;
+
                 background: var(--black);
+
                 color: white;
+
                 z-index: 1500;
+
                 align-items: center;
+
                 justify-content: space-between;
+
                 padding: 0 20px;
+
             }
+
 
             .mobile-logo {
-                font-family: 'Allura', cursive;
+
+                font-family:
+                    'Allura', cursive;
+
                 color: var(--brown);
+
                 font-size: 40px;
+
+                line-height: 1;
+
             }
+
 
             .mobile-menu-button {
-                background: none;
+
+                background: transparent;
+
                 border: none;
+
                 color: white;
-                font-size: 25px;
+
+                font-size: 27px;
+
                 cursor: pointer;
+
+                width: 45px;
+
+                height: 45px;
+
+                display: flex;
+
+                align-items: center;
+
+                justify-content: center;
+
             }
-.mobile-menu {
-    position: fixed;
-    top: 65px;
-    left: -100%;
-    width: 280px;
-    max-width: 85%;
-    height: calc(100vh - 65px);
-    background: #111111;
-    z-index: 1400;
-    padding: 25px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    box-shadow: 10px 0 30px rgba(0,0,0,0.25);
-    transition: left 0.3s ease;
-}
 
-.mobile-menu.open {
-    left: 0;
-}
 
-.mobile-menu button {
-    border: none;
-    background: transparent;
-    color: #eeeeee;
-    padding: 15px;
-    text-align: left;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 7px;
-}
+            /* =================================================
+               MENU MOBILE
+            ================================================= */
 
-.mobile-menu button:hover {
-    background: #292929;
-    color: white;
-}
+            .mobile-menu {
 
-.mobile-category-title {
-    color: #9a7257;
-    font-size: 11px;
-    letter-spacing: 2px;
-    font-weight: 600;
-    padding: 20px 15px 8px;
-}
+                display: flex;
 
-.mobile-socials {
-    margin-top: auto;
-    padding-top: 20px;
-    border-top: 1px solid #333;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    padding-left: 15px;
-}
+                position: fixed;
 
-.mobile-socials a {
-    color: #aaa;
-    text-decoration: none;
-    font-size: 12px;
-}
+                top: 65px;
 
-.mobile-socials a:hover {
-    color: #9a7257;
-}
+                left: -320px;
+
+                width: 280px;
+
+                max-width: 85vw;
+
+                height:
+                    calc(100vh - 65px);
+
+                background: var(--black);
+
+                z-index: 1400;
+
+                padding: 25px 20px;
+
+                flex-direction: column;
+
+                gap: 5px;
+
+                box-shadow:
+                    10px 0 30px
+                    rgba(0,0,0,0.30);
+
+                overflow-y: auto;
+
+                transition:
+                    left 0.3s ease;
+
+            }
+
+
+            .mobile-menu.open {
+
+                left: 0;
+
+            }
+
+
+            .mobile-menu button {
+
+                border: none;
+
+                background: transparent;
+
+                color: #eeeeee;
+
+                padding: 15px;
+
+                text-align: left;
+
+                font-family:
+                    'Montserrat', sans-serif;
+
+                font-size: 14px;
+
+                cursor: pointer;
+
+                border-radius: 7px;
+
+                width: 100%;
+
+            }
+
+
+            .mobile-menu button:hover {
+
+                background: #292929;
+
+                color: white;
+
+            }
+
+
+            .mobile-category-title {
+
+                color: var(--brown);
+
+                font-size: 11px;
+
+                letter-spacing: 2px;
+
+                font-weight: 600;
+
+                padding:
+                    20px 15px 8px;
+
+            }
+
+
+            .mobile-socials {
+
+                margin-top: auto;
+
+                padding-top: 20px;
+
+                border-top:
+                    1px solid #333;
+
+                display: flex;
+
+                flex-direction: column;
+
+                gap: 12px;
+
+                padding-left: 15px;
+
+                padding-bottom: 20px;
+
+            }
+
+
+            .mobile-socials a {
+
+                color: #aaa;
+
+                text-decoration: none;
+
+                font-size: 12px;
+
+            }
+
+
+            .mobile-socials a:hover {
+
+                color: var(--brown);
+
+            }
+
+
+            /* =================================================
+               HERO MOBILE
+            ================================================= */
+
             .hero {
+
                 padding-top: 110px;
+
                 min-height: 600px;
+
             }
 
-            .products-grid,
-            .how-grid,
-            .info-grid {
-                grid-template-columns: repeat(2, 1fr);
+
+            /* =================================================
+               PRODUCTOS
+            ================================================= */
+
+            .products-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
             }
+
+
+            /* =================================================
+               COMO TRABAJAMOS
+            ================================================= */
+
+            .how-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+
+            /* =================================================
+               INFO
+            ================================================= */
+
+            .info-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+
+            /* =================================================
+               MODAL
+            ================================================= */
 
             .product-modal-grid {
-                grid-template-columns: 1fr;
+
+                grid-template-columns:
+                    1fr;
+
             }
+
         }
+
+
+        /* =====================================================
+           CELULAR
+        ===================================================== */
 
         @media (max-width: 650px) {
 
+
             section {
-                padding: 65px 20px;
+
+                padding:
+                    65px 20px;
+
             }
 
-            .hero h1 {
-                font-size: 90px;
+
+            .hero {
+
+                min-height: 600px;
+
+                padding:
+                    110px 20px 60px;
+
             }
+
+
+            .hero h1 {
+
+                font-size: 90px;
+
+            }
+
+
+            .hero p {
+
+                font-size: 14px;
+
+            }
+
 
             .products-grid,
             .how-grid,
             .info-grid {
-                grid-template-columns: 1fr;
+
+                grid-template-columns:
+                    1fr;
+
             }
+
 
             .product-image {
+
                 height: 350px;
+
             }
+
 
             .cart-panel {
+
                 width: 100%;
+
+                max-width: 100%;
+
             }
+
 
             .shipping-options {
-                grid-template-columns: 1fr;
+
+                grid-template-columns:
+                    1fr;
+
             }
+
 
             .product-modal {
+
                 padding: 20px;
+
+                max-height: 94vh;
+
             }
 
+
             .modal-product-image {
+
                 height: 330px;
+
             }
+
+
+            .modal-info h2 {
+
+                font-size: 25px;
+
+            }
+
+
+            .cart-button {
+
+                right: 18px;
+
+                bottom: 18px;
+
+            }
+
         }
 
     </style>
+
 </head>
+
 
 <body>
 
-<!-- =========================
-     HEADER MOBILE
-========================= -->
 
-<header class="mobile-header">
-    <div class="mobile-logo">Carry Love</div>
+    <!-- =====================================================
+         HEADER MOBILE
+    ===================================================== -->
 
-    <button class="mobile-menu-button"
-            onclick="toggleMobileMenu()"
-            aria-label="Abrir menú">
-        ☰
-    </button>
-</header>
+    <header class="mobile-header">
 
-<div id="mobileMenu" class="mobile-menu">
-
-    <button onclick="mobileNavigate('inicio')">
-        🏠 Inicio
-    </button>
-
-    <div class="mobile-category-title">
-        CATEGORÍAS
-    </div>
-
-    <button onclick="mobileFilter('Zapatillas')">
-        👟 Zapatillas
-    </button>
-
-    <button onclick="mobileFilter('Indumentaria')">
-        👕 Indumentaria
-    </button>
-
-    <button onclick="mobileFilter('Accesorios')">
-        👜 Accesorios
-    </button>
-
-    <button onclick="mobileNavigate('como-trabajamos')">
-        🤎 Cómo trabajamos
-    </button>
-
-    <button onclick="openCart(); closeMobileMenu()">
-        🛒 Carrito
-    </button>
-
-    <div class="mobile-socials">
-
-        <a href="https://www.instagram.com/carteras_carrylove"
-           target="_blank">
-            Instagram
-        </a>
-
-        <a href="https://www.facebook.com/share/1Yc6i8rMRu/?mibextid=wwXIfr"
-           target="_blank">
-            Facebook
-        </a>
-
-        <a href="https://www.tiktok.com/@carry.love.carter"
-           target="_blank">
-            TikTok
-        </a>
-
-    </div>
-
-</div>
-
-
-<!-- =========================
-     SIDEBAR
-========================= -->
-
-<aside class="sidebar">
-
-    <div class="logo">
-        Carry Love
-    </div>
-
-    <nav class="menu">
-
-        <button onclick="scrollToSection('inicio')">
-            Inicio
-        </button>
-
-        <button class="category-title">
-            CATEGORÍAS
-        </button>
-
-        <button onclick="filterProducts('Zapatillas')">
-            Zapatillas
-        </button>
-
-        <button onclick="filterProducts('Indumentaria')">
-            Indumentaria
-        </button>
-
-        <button onclick="filterProducts('Accesorios')">
-            Accesorios
-        </button>
-
-        <button onclick="scrollToSection('como-trabajamos')">
-            Cómo trabajamos
-        </button>
-
-        <button onclick="openCart()">
-            Carrito
-        </button>
-
-    </nav>
-
-    <div class="social-sidebar">
-
-        <a href="https://www.instagram.com/carteras_carrylove"
-           target="_blank">
-            Instagram
-        </a>
-
-        <a href="https://www.facebook.com/share/1Yc6i8rMRu/?mibextid=wwXIfr"
-           target="_blank">
-            Facebook
-        </a>
-
-        <a href="https://www.tiktok.com/@carry.love.carter"
-           target="_blank">
-            TikTok
-        </a>
-
-    </div>
-
-</aside>
-
-
-<!-- =========================
-     MAIN
-========================= -->
-
-<main>
-
-    <!-- HERO -->
-
-    <section class="hero" id="inicio">
-
-        <div class="hero-content">
-
-            <div class="hero-small">
-                Zapala · Neuquén
-            </div>
-
-            <h1>
-                Carry Love
-            </h1>
-
-            <p>
-                Zapatillas, indumentaria y accesorios
-                seleccionados para vos.
-            </p>
-
-            <a href="#productos" class="hero-button">
-                VER PRODUCTOS
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- PRODUCTOS -->
-
-    <section id="productos">
-
-        <div class="section-title">
-
-            <span>
-                Nuestra selección
-            </span>
-
-            <h2>
-                Zapatillas
-            </h2>
-
-        </div>
-
-        <div id="productsGrid" class="products-grid"></div>
-
-    </section>
-
-
-    <!-- COMO TRABAJAMOS -->
-
-    <section class="how-section" id="como-trabajamos">
-
-        <div class="section-title">
-
-            <span>
-                Información importante
-            </span>
-
-            <h2>
-                Cómo trabajamos
-            </h2>
-
-        </div>
-
-
-        <div class="how-grid">
-
-            <div class="how-card">
-
-                <span class="how-number">
-                    01
-                </span>
-
-                <h3>
-                    Pedidos y stock
-                </h3>
-
-                <p>
-                    Trabajamos tanto con productos disponibles
-                    como con productos por pedido.
-                    Por eso, no todos los artículos se encuentran
-                    disponibles para despacho inmediato.
-                </p>
-
-            </div>
-
-
-            <div class="how-card">
-
-                <span class="how-number">
-                    02
-                </span>
-
-                <h3>
-                    Tiempos de despacho
-                </h3>
-
-                <p>
-                    Los productos que se trabajan por pedido
-                    pueden demorar entre 5 y 10 días hábiles
-                    en ser despachados.
-                </p>
-
-            </div>
-
-
-            <div class="how-card">
-
-                <span class="how-number">
-                    03
-                </span>
-
-                <h3>
-                    Envíos
-                </h3>
-
-                <p>
-                    Realizamos envíos a todo el país.
-                    Podés elegir entre Correo Argentino
-                    o Vía Cargo y coordinamos los detalles
-                    directamente por WhatsApp.
-                </p>
-
-            </div>
-
-
-            <div class="how-card">
-
-                <span class="how-number">
-                    04
-                </span>
-
-                <h3>
-                    Medios de pago
-                </h3>
-
-                <p>
-                    Ofrecemos 3 cuotas sin interés con tarjetas
-                    adheridas y opciones de pago mediante
-                    Mercado Pago.
-                    También tenés 15% de descuento pagando
-                    por transferencia o efectivo.
-                </p>
-
-            </div>
-
-
-            <div class="how-card">
-
-                <span class="how-number">
-                    05
-                </span>
-
-                <h3>
-                    Elegí tu talle
-                </h3>
-
-                <p>
-                    Cada producto contará con su guía de talles.
-                    Recomendamos medir cuidadosamente y consultar
-                    la guía antes de realizar el pedido.
-                </p>
-
-            </div>
-
-
-            <div class="how-card">
-
-                <span class="how-number">
-                    06
-                </span>
-
-                <h3>
-                    Cambios y fallas
-                </h3>
-
-                <p>
-                    Para cualquier inconveniente con el producto,
-                    solicitamos grabar un video al momento de abrir
-                    el paquete. Si se detecta una falla en ese momento,
-                    se evaluará y reconocerá según corresponda.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="patience-box">
-
-            <h3>
-                🤎 Lo más importante: paciencia
-            </h3>
-
-            <p>
-                Si estás buscando una compra urgente o necesitás
-                recibir tu producto inmediatamente, tené en cuenta
-                que Carry Love trabaja principalmente con pedidos.
-                No siempre contamos con stock disponible para
-                despacho inmediato.
-
-                <br><br>
-
-                Algunos productos requieren tiempo para ser pedidos,
-                recibidos y preparados para el envío.
-                <strong>
-                    Por eso te pedimos paciencia y comprensión.
-                </strong>
-
-                Nuestro objetivo es que recibas tu producto
-                en las mejores condiciones posibles.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- INFORMACIÓN -->
-
-    <section>
-
-        <div class="section-title">
-
-            <span>
-                Carry Love
-            </span>
-
-            <h2>
-                Encontranos
-            </h2>
-
-        </div>
-
-
-        <div class="info-grid">
-
-            <div class="info-card">
-
-                <h3>
-                    📍 Ubicación
-                </h3>
-
-                <p>
-                    Zapala, Neuquén.
-                    <br>
-                    Envíos a todo el país.
-                </p>
-
-            </div>
-
-
-            <div class="info-card">
-
-                <h3>
-                    🕘 Horarios
-                </h3>
-
-                <p>
-                    Lunes a domingo
-                    <br>
-                    09:00 a 22:00 hs.
-                </p>
-
-            </div>
-
-
-            <div class="info-card">
-
-                <h3>
-                    📲 Compras
-                </h3>
-
-                <p>
-                    Elegí tus productos,
-                    agregalos al carrito y
-                    finalizá tu pedido directamente
-                    por WhatsApp.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <div class="footer-logo">
+        <div class="mobile-logo">
             Carry Love
         </div>
 
-        <p>
-            Zapala · Neuquén
-        </p>
 
-        <p>
-            Zapatillas · Indumentaria · Accesorios
-        </p>
+        <button
+            class="mobile-menu-button"
+            onclick="toggleMobileMenu()"
+            aria-label="Abrir menú">
 
-        <div class="footer-socials">
+            ☰
 
-            <a href="https://www.instagram.com/carteras_carrylove"
-               target="_blank">
+        </button>
+
+    </header>
+
+
+    <!-- =====================================================
+         MENU MOBILE
+    ===================================================== -->
+
+    <div id="mobileMenu"
+         class="mobile-menu">
+
+
+        <button
+            onclick="mobileNavigate('inicio')">
+
+            🏠 Inicio
+
+        </button>
+
+
+        <div class="mobile-category-title">
+
+            CATEGORÍAS
+
+        </div>
+
+
+        <button
+            onclick="mobileFilter('Zapatillas')">
+
+            👟 Zapatillas
+
+        </button>
+
+
+        <button
+            onclick="mobileFilter('Indumentaria')">
+
+            👕 Indumentaria
+
+        </button>
+
+
+        <button
+            onclick="mobileFilter('Accesorios')">
+
+            👜 Accesorios
+
+        </button>
+
+
+        <button
+            onclick="mobileNavigate('como-trabajamos')">
+
+            🤎 Cómo trabajamos
+
+        </button>
+
+
+        <button
+            onclick="openCart(); closeMobileMenu()">
+
+            🛒 Carrito
+
+        </button>
+
+
+        <div class="mobile-socials">
+
+
+            <a
+                href="https://www.instagram.com/carteras_carrylove"
+                target="_blank"
+                rel="noopener noreferrer">
+
                 Instagram
+
             </a>
 
-            <a href="https://www.facebook.com/share/1Yc6i8rMRu/?mibextid=wwXIfr"
-               target="_blank">
+
+            <a
+                href="https://www.facebook.com/share/1Yc6i8rMRu/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer">
+
                 Facebook
+
             </a>
 
-            <a href="https://www.tiktok.com/@carry.love.carter"
-               target="_blank">
+
+            <a
+                href="https://www.tiktok.com/@carry.love.carter"
+                target="_blank"
+                rel="noopener noreferrer">
+
                 TikTok
+
             </a>
 
+
         </div>
-
-    </footer>
-
-</main>
-
-
-<!-- =========================
-     BOTÓN CARRITO
-========================= -->
-
-<button class="cart-button" onclick="openCart()">
-
-    🛒
-
-    <span id="cartCount" class="cart-count">
-        0
-    </span>
-
-</button>
-
-
-<!-- =========================
-     PANEL CARRITO
-========================= -->
-
-<div id="cartPanel" class="cart-panel">
-
-    <div class="cart-header">
-
-        <h2>
-            Tu carrito
-        </h2>
-
-        <button class="close-cart" onclick="closeCart()">
-            ×
-        </button>
 
     </div>
 
 
-    <div id="cartItems" class="cart-items"></div>
+    <!-- =====================================================
+         SIDEBAR DESKTOP
+    ===================================================== -->
+
+    <aside class="sidebar">
 
 
-    <div class="cart-footer">
+        <div class="logo">
 
-        <div class="cart-total">
-
-            <span>
-                Subtotal
-            </span>
-
-            <span id="cartTotal">
-                $0
-            </span>
+            Carry Love
 
         </div>
 
-        <button class="checkout-button"
-                onclick="openCheckout()">
 
-            FINALIZAR COMPRA
-
-        </button>
-
-    </div>
-
-</div>
+        <nav class="menu">
 
 
-<!-- =========================
-     MODAL PRODUCTO
-========================= -->
+            <button
+                onclick="scrollToSection('inicio')">
 
-<div id="productModal" class="modal-overlay">
+                Inicio
 
-    <div class="product-modal">
-
-        <button class="modal-close"
-                onclick="closeProductModal()">
-            ×
-        </button>
-
-        <div class="product-modal-grid">
-
-            <div class="modal-product-image">
-
-                <img id="modalImage"
-                     src=""
-                     alt="Producto">
-
-            </div>
+            </button>
 
 
-            <div class="modal-info">
+            <button
+                class="category-title">
 
-                <div id="modalCategory"
-                     class="product-category">
+                CATEGORÍAS
+
+            </button>
+
+
+            <button
+                onclick="filterProducts('Zapatillas')">
+
+                Zapatillas
+
+            </button>
+
+
+            <button
+                onclick="filterProducts('Indumentaria')">
+
+                Indumentaria
+
+            </button>
+
+
+            <button
+                onclick="filterProducts('Accesorios')">
+
+                Accesorios
+
+            </button>
+
+
+            <button
+                onclick="scrollToSection('como-trabajamos')">
+
+                Cómo trabajamos
+
+            </button>
+
+
+            <button
+                onclick="openCart()">
+
+                Carrito
+
+            </button>
+
+
+        </nav>
+
+
+        <div class="social-sidebar">
+
+
+            <a
+                href="https://www.instagram.com/carteras_carrylove"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Instagram
+
+            </a>
+
+
+            <a
+                href="https://www.facebook.com/share/1Yc6i8rMRu/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Facebook
+
+            </a>
+
+
+            <a
+                href="https://www.tiktok.com/@carry.love.carter"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                TikTok
+
+            </a>
+
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN
+    ===================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             HERO
+        ================================================= -->
+
+        <section
+            class="hero"
+            id="inicio">
+
+
+            <div class="hero-content">
+
+
+                <div class="hero-small">
+
+                    Zapala · Neuquén
+
                 </div>
 
-                <h2 id="modalName">
-                </h2>
 
-                <div id="modalPrice"
-                     class="modal-price">
-                </div>
+                <h1>
 
-                <p id="modalDescription"
-                   class="modal-description">
+                    Carry Love
+
+                </h1>
+
+
+                <p>
+
+                    Zapatillas, indumentaria y accesorios
+                    seleccionados para vos.
+
                 </p>
 
 
-                <label class="option-label">
-                    Talle
-                </label>
+                <a
+                    href="#productos"
+                    class="hero-button">
 
-                <select id="modalSize"
-                        class="option-select">
-                </select>
+                    VER PRODUCTOS
 
+                </a>
 
-                <label class="option-label">
-                    Color
-                </label>
-
-                <select id="modalColor"
-                        class="option-select">
-                </select>
-
-
-                <button class="guide-button"
-                        onclick="showSizeGuide()">
-
-                    📏 Ver guía de talles
-
-                </button>
-
-
-                <button class="add-cart-modal"
-                        onclick="addSelectedProductToCart()">
-
-                    AGREGAR AL CARRITO
-
-                </button>
 
             </div>
 
-        </div>
-
-    </div>
-
-</div>
+        </section>
 
 
-<!-- =========================
-     CHECKOUT
-========================= -->
+        <!-- =================================================
+             PRODUCTOS
+        ================================================= -->
 
-<div id="checkoutModal" class="modal-overlay">
-
-    <div class="product-modal">
-
-        <button class="modal-close"
-                onclick="closeCheckout()">
-            ×
-        </button>
+        <section id="productos">
 
 
-        <div class="checkout-form">
-
-            <h2>
-                Finalizar pedido
-            </h2>
-
-            <p style="color:#777; line-height:1.7; margin-bottom:25px;">
-                Completá tus datos y te enviaremos el pedido
-                directamente por WhatsApp para coordinar
-                la compra.
-            </p>
+            <div class="section-title">
 
 
-            <div class="form-group">
+                <span>
 
-                <label>
-                    Nombre y apellido
-                </label>
+                    Nuestra selección
 
-                <input type="text"
-                       id="customerName"
-                       placeholder="Ej: María Pérez">
+                </span>
+
+
+                <h2 id="productsTitle">
+
+                    Zapatillas
+
+                </h2>
+
 
             </div>
 
 
-            <div class="form-group">
-
-                <label>
-                    Dirección
-                </label>
-
-                <input type="text"
-                       id="customerAddress"
-                       placeholder="Calle y número">
+            <div
+                id="productsGrid"
+                class="products-grid">
 
             </div>
 
 
-            <div class="form-group">
+        </section>
 
-                <label>
-                    Localidad
-                </label>
 
-                <input type="text"
-                       id="customerCity"
-                       placeholder="Ej: Zapala">
+        <!-- =================================================
+             COMO TRABAJAMOS
+        ================================================= -->
+
+        <section
+            class="how-section"
+            id="como-trabajamos">
+
+
+            <div class="section-title">
+
+
+                <span>
+
+                    Información importante
+
+                </span>
+
+
+                <h2>
+
+                    Cómo trabajamos
+
+                </h2>
+
 
             </div>
 
 
-            <div class="form-group">
-
-                <label>
-                    ¿Necesitás envío?
-                </label>
-
-                <div class="shipping-options">
-
-                    <label class="shipping-option">
-
-                        <input type="radio"
-                               name="shipping"
-                               value="Sí"
-                               checked>
-
-                        Sí, necesito envío
-
-                    </label>
+            <div class="how-grid">
 
 
-                    <label class="shipping-option">
+                <div class="how-card">
 
-                        <input type="radio"
-                               name="shipping"
-                               value="No">
+                    <span class="how-number">
+                        01
+                    </span>
 
-                        No necesito envío
+                    <h3>
+                        Pedidos y stock
+                    </h3>
 
-                    </label>
+                    <p>
+
+                        Trabajamos tanto con productos
+                        disponibles como con productos
+                        por pedido.
+
+                        Por eso, no todos los artículos
+                        se encuentran disponibles para
+                        despacho inmediato.
+
+                    </p>
+
+                </div>
+
+
+                <div class="how-card">
+
+                    <span class="how-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Tiempos de despacho
+                    </h3>
+
+                    <p>
+
+                        Los productos que se trabajan
+                        por pedido pueden demorar entre
+                        5 y 10 días hábiles en ser
+                        despachados.
+
+                    </p>
+
+                </div>
+
+
+                <div class="how-card">
+
+                    <span class="how-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Envíos
+                    </h3>
+
+                    <p>
+
+                        Realizamos envíos a todo el país.
+
+                        Podés elegir entre Correo Argentino
+                        o Vía Cargo y coordinamos los
+                        detalles directamente por WhatsApp.
+
+                    </p>
+
+                </div>
+
+
+                <div class="how-card">
+
+                    <span class="how-number">
+                        04
+                    </span>
+
+                    <h3>
+                        Medios de pago
+                    </h3>
+
+                    <p>
+
+                        Ofrecemos 3 cuotas sin interés
+                        con tarjetas adheridas y opciones
+                        de pago mediante Mercado Pago.
+
+                        También tenés 15% de descuento
+                        pagando por transferencia o efectivo.
+
+                    </p>
+
+                </div>
+
+
+                <div class="how-card">
+
+                    <span class="how-number">
+                        05
+                    </span>
+
+                    <h3>
+                        Elegí tu talle
+                    </h3>
+
+                    <p>
+
+                        Cada producto contará con su guía
+                        de talles.
+
+                        Recomendamos medir cuidadosamente
+                        y consultar la guía antes de
+                        realizar el pedido.
+
+                    </p>
+
+                </div>
+
+
+                <div class="how-card">
+
+                    <span class="how-number">
+                        06
+                    </span>
+
+                    <h3>
+                        Cambios y fallas
+                    </h3>
+
+                    <p>
+
+                        Para cualquier inconveniente con
+                        el producto, solicitamos grabar un
+                        video al momento de abrir el paquete.
+
+                        Si se detecta una falla en ese momento,
+                        se evaluará y reconocerá según corresponda.
+
+                    </p>
 
                 </div>
 
             </div>
 
 
-            <div class="form-group">
+            <!-- AVISO DE PACIENCIA -->
 
-                <label>
-                    Forma de entrega
-                </label>
+            <div class="patience-box">
 
-                <select id="deliveryMethod">
 
-                    <option value="A coordinar">
-                        A coordinar
-                    </option>
+                <h3>
 
-                    <option value="Correo Argentino">
-                        Correo Argentino
-                    </option>
+                    🤎 Lo más importante: paciencia
 
-                    <option value="Vía Cargo">
-                        Vía Cargo
-                    </option>
+                </h3>
 
-                </select>
+
+                <p>
+
+                    Si estás buscando una compra urgente
+                    o necesitás recibir tu producto
+                    inmediatamente, tené en cuenta que
+                    Carry Love trabaja principalmente
+                    con pedidos.
+
+                    <br><br>
+
+                    No siempre contamos con stock disponible
+                    para despacho inmediato.
+
+                    Algunos productos requieren tiempo para
+                    ser pedidos, recibidos y preparados para
+                    el envío.
+
+                    <br><br>
+
+                    <strong>
+                        Por eso te pedimos paciencia y comprensión.
+                    </strong>
+
+                    <br><br>
+
+                    Nuestro objetivo es que recibas tu producto
+                    en las mejores condiciones posibles.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             INFORMACION
+        ================================================= -->
+
+        <section>
+
+
+            <div class="section-title">
+
+
+                <span>
+
+                    Carry Love
+
+                </span>
+
+
+                <h2>
+
+                    Encontranos
+
+                </h2>
+
 
             </div>
 
 
-            <button class="whatsapp-button"
-                    onclick="sendOrderToWhatsApp()">
+            <div class="info-grid">
 
-                📲 ENVIAR PEDIDO POR WHATSAPP
+
+                <div class="info-card">
+
+                    <h3>
+                        📍 Ubicación
+                    </h3>
+
+                    <p>
+
+                        Zapala, Neuquén.
+
+                        <br>
+
+                        Envíos a todo el país.
+
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <h3>
+                        🕘 Horarios
+                    </h3>
+
+                    <p>
+
+                        Atención:
+
+                        <br>
+
+                        09:00 a 22:00 hs.
+
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <h3>
+                        📲 Compras
+                    </h3>
+
+                    <p>
+
+                        Elegí tus productos,
+                        agregalos al carrito y
+                        finalizá tu pedido directamente
+                        por WhatsApp.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================= -->
+
+        <footer>
+
+
+            <div class="footer-logo">
+
+                Carry Love
+
+            </div>
+
+
+            <p>
+
+                Zapala · Neuquén
+
+            </p>
+
+
+            <p>
+
+                Zapatillas · Indumentaria · Accesorios
+
+            </p>
+
+
+            <div class="footer-socials">
+
+
+                <a
+                    href="https://www.instagram.com/carteras_carrylove"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    Instagram
+
+                </a>
+
+
+                <a
+                    href="https://www.facebook.com/share/1Yc6i8rMRu/?mibextid=wwXIfr"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    Facebook
+
+                </a>
+
+
+                <a
+                    href="https://www.tiktok.com/@carry.love.carter"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    TikTok
+
+                </a>
+
+
+            </div>
+
+        </footer>
+
+    </main>
+
+
+    <!-- =====================================================
+         BOTON CARRITO
+    ===================================================== -->
+
+    <button
+        class="cart-button"
+        onclick="openCart()"
+        aria-label="Abrir carrito">
+
+        🛒
+
+        <span
+            id="cartCount"
+            class="cart-count">
+
+            0
+
+        </span>
+
+    </button>
+
+
+    <!-- =====================================================
+         PANEL CARRITO
+    ===================================================== -->
+
+    <div
+        id="cartPanel"
+        class="cart-panel">
+
+
+        <div class="cart-header">
+
+
+            <h2>
+
+                Tu carrito
+
+            </h2>
+
+
+            <button
+                class="close-cart"
+                onclick="closeCart()"
+                aria-label="Cerrar carrito">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <div
+            id="cartItems"
+            class="cart-items">
+
+        </div>
+
+
+        <div class="cart-footer">
+
+
+            <div class="cart-total">
+
+
+                <span>
+
+                    Subtotal
+
+                </span>
+
+
+                <span id="cartTotal">
+
+                    $0
+
+                </span>
+
+            </div>
+
+
+            <button
+                class="checkout-button"
+                onclick="openCheckout()">
+
+                FINALIZAR COMPRA
 
             </button>
 
@@ -1675,764 +2632,1453 @@
 
     </div>
 
-</div>
+
+    <!-- =====================================================
+         MODAL PRODUCTO
+    ===================================================== -->
+
+    <div
+        id="productModal"
+        class="modal-overlay">
 
 
-<script>
-
-    /* ==================================================
-       PRODUCTOS
-       
-       ACÁ VAS A AGREGAR TUS PRODUCTOS MÁS ADELANTE.
-       ================================================== */
-
-    const products = [
-
-        /*
-        EJEMPLO:
-
-        {
-            id: 1,
-            name: "Zapatilla Ejemplo",
-            category: "Zapatillas",
-            price: 85000,
-            image: "images/zapatilla-ejemplo.jpg",
-
-            description:
-                "Descripción del producto.",
-
-            sizes: [
-                "36",
-                "37",
-                "38",
-                "39",
-                "40"
-            ],
-
-            colors: [
-                "Blanco",
-                "Negro"
-            ],
-
-            sizeGuide:
-                "images/guia-zapatillas.jpg"
-        }
-        */
-
-    ];
+        <div class="product-modal">
 
 
-    /* ==================================================
-       CARRITO
-       ================================================== */
+            <button
+                class="modal-close"
+                onclick="closeProductModal()"
+                aria-label="Cerrar">
 
-    let cart = [];
+                ×
 
-    let selectedProduct = null;
-
-
-    function formatPrice(price) {
-
-        return new Intl.NumberFormat('es-AR', {
-            style: 'currency',
-            currency: 'ARS',
-            maximumFractionDigits: 0
-        }).format(price);
-
-    }
+            </button>
 
 
-    /* ==================================================
-       MOSTRAR PRODUCTOS
-       ================================================== */
-
-    function renderProducts(list = products) {
-
-        const grid =
-            document.getElementById('productsGrid');
-
-        if (list.length === 0) {
-
-            grid.innerHTML = `
-
-                <div style="
-                    grid-column: 1 / -1;
-                    text-align:center;
-                    padding:80px 20px;
-                    color:#888;
-                ">
-
-                    <h3 style="
-                        font-size:24px;
-                        margin-bottom:10px;
-                        color:#333;
-                    ">
-                        Próximamente
-                    </h3>
-
-                    <p>
-                        Estamos preparando nuestra selección
-                        de productos para vos. 🤎
-                    </p>
-
-                </div>
-
-            `;
-
-            return;
-        }
+            <div class="product-modal-grid">
 
 
-        grid.innerHTML = list.map(product => `
+                <div class="modal-product-image">
 
-            <article class="product-card">
-
-                <div class="product-image">
 
                     <img
-                        src="${product.image}"
-                        alt="${product.name}"
-                        onerror="
-                            this.style.display='none';
-                            this.nextElementSibling.style.display='block';
-                        "
-                    >
+                        id="modalImage"
+                        src=""
+                        alt="Producto">
 
-                    <div class="product-placeholder"
-                         style="display:none;">
-
-                        Imagen del producto
-
-                    </div>
 
                 </div>
 
 
-                <div class="product-info">
+                <div class="modal-info">
 
-                    <div class="product-category">
-                        ${product.category}
+
+                    <div
+                        id="modalCategory"
+                        class="product-category">
+
                     </div>
 
-                    <div class="product-name">
-                        ${product.name}
+
+                    <h2 id="modalName">
+
+                    </h2>
+
+
+                    <div
+                        id="modalPrice"
+                        class="modal-price">
+
                     </div>
 
-                    <div class="product-price">
-                        ${formatPrice(product.price)}
-                    </div>
 
-                    <button
-                        class="product-button"
-                        onclick="openProductModal(${product.id})">
+                    <p
+                        id="modalDescription"
+                        class="modal-description">
 
-                        VER PRODUCTO
-
-                    </button>
-
-                </div>
-
-            </article>
-
-        `).join('');
-
-    }
-
-
-    /* ==================================================
-       FILTROS
-       ================================================== */
-
-    function filterProducts(category) {
-
-        const filtered =
-            products.filter(
-                product => product.category === category
-            );
-
-        document.querySelector(
-            '#productos h2'
-        ).textContent = category;
-
-        renderProducts(filtered);
-
-        scrollToSection('productos');
-
-    }
-
-
-    /* ==================================================
-       MODAL PRODUCTO
-       ================================================== */
-
-    function openProductModal(id) {
-
-        selectedProduct =
-            products.find(product => product.id === id);
-
-        if (!selectedProduct) return;
-
-
-        document.getElementById('modalImage').src =
-            selectedProduct.image;
-
-        document.getElementById('modalName').textContent =
-            selectedProduct.name;
-
-        document.getElementById('modalCategory').textContent =
-            selectedProduct.category;
-
-        document.getElementById('modalPrice').textContent =
-            formatPrice(selectedProduct.price);
-
-        document.getElementById('modalDescription').textContent =
-            selectedProduct.description || '';
-
-
-        const sizeSelect =
-            document.getElementById('modalSize');
-
-        sizeSelect.innerHTML =
-            selectedProduct.sizes.map(size => `
-                <option value="${size}">
-                    ${size}
-                </option>
-            `).join('');
-
-
-        const colorSelect =
-            document.getElementById('modalColor');
-
-        colorSelect.innerHTML =
-            selectedProduct.colors.map(color => `
-                <option value="${color}">
-                    ${color}
-                </option>
-            `).join('');
-
-
-        document
-            .getElementById('productModal')
-            .classList.add('active');
-
-    }
-
-
-    function closeProductModal() {
-
-        document
-            .getElementById('productModal')
-            .classList.remove('active');
-
-    }
-
-
-    /* ==================================================
-       AGREGAR AL CARRITO
-       ================================================== */
-
-    function addSelectedProductToCart() {
-
-        if (!selectedProduct) return;
-
-
-        const size =
-            document.getElementById('modalSize').value;
-
-        const color =
-            document.getElementById('modalColor').value;
-
-
-        const existing =
-            cart.find(item =>
-                item.product.id === selectedProduct.id &&
-                item.size === size &&
-                item.color === color
-            );
-
-
-        if (existing) {
-
-            existing.quantity++;
-
-        } else {
-
-            cart.push({
-
-                product: selectedProduct,
-
-                size: size,
-
-                color: color,
-
-                quantity: 1
-
-            });
-
-        }
-
-
-        saveCart();
-
-        updateCart();
-
-        closeProductModal();
-
-        openCart();
-
-    }
-
-
-    /* ==================================================
-       CARRITO
-       ================================================== */
-
-    function updateCart() {
-
-        const container =
-            document.getElementById('cartItems');
-
-        const count =
-            cart.reduce(
-                (total, item) =>
-                    total + item.quantity,
-                0
-            );
-
-        document.getElementById('cartCount')
-            .textContent = count;
-
-
-        if (cart.length === 0) {
-
-            container.innerHTML = `
-
-                <div class="empty-cart">
-
-                    <div style="font-size:40px;">
-                        🛒
-                    </div>
-
-                    <p style="margin-top:15px;">
-                        Tu carrito está vacío.
                     </p>
 
-                </div>
 
-            `;
+                    <label
+                        class="option-label">
 
-            document.getElementById('cartTotal')
-                .textContent = '$0';
+                        Talle
 
-            return;
-        }
+                    </label>
 
 
-        container.innerHTML =
-            cart.map((item, index) => `
+                    <select
+                        id="modalSize"
+                        class="option-select">
 
-                <div class="cart-item">
-
-                    <div class="cart-item-name">
-                        ${item.product.name}
-                    </div>
-
-                    <div class="cart-item-details">
-
-                        Talle:
-                        ${item.size}
-
-                        <br>
-
-                        Color:
-                        ${item.color}
-
-                        <br>
-
-                        Precio:
-                        ${formatPrice(item.product.price)}
-
-                    </div>
+                    </select>
 
 
-                    <div class="quantity-controls">
+                    <label
+                        class="option-label">
 
-                        <button
-                            onclick="changeQuantity(${index}, -1)">
-                            −
-                        </button>
+                        Color
 
-                        <span>
-                            ${item.quantity}
-                        </span>
+                    </label>
 
-                        <button
-                            onclick="changeQuantity(${index}, 1)">
-                            +
-                        </button>
 
-                    </div>
+                    <select
+                        id="modalColor"
+                        class="option-select">
+
+                    </select>
 
 
                     <button
-                        class="remove-item"
-                        onclick="removeItem(${index})">
+                        class="guide-button"
+                        onclick="showSizeGuide()">
 
-                        Eliminar
+                        📏 Ver guía de talles
+
+                    </button>
+
+
+                    <button
+                        class="add-cart-modal"
+                        onclick="addSelectedProductToCart()">
+
+                        AGREGAR AL CARRITO
 
                     </button>
 
                 </div>
 
-            `).join('');
+            </div>
+
+        </div>
+
+    </div>
 
 
-        const total =
-            cart.reduce(
-                (sum, item) =>
-                    sum +
-                    (item.product.price *
-                     item.quantity),
-                0
-            );
+    <!-- =====================================================
+         CHECKOUT
+    ===================================================== -->
+
+    <div
+        id="checkoutModal"
+        class="modal-overlay">
 
 
-        document.getElementById('cartTotal')
-            .textContent = formatPrice(total);
-
-    }
+        <div class="product-modal">
 
 
-    function changeQuantity(index, amount) {
+            <button
+                class="modal-close"
+                onclick="closeCheckout()"
+                aria-label="Cerrar">
 
-        cart[index].quantity += amount;
+                ×
 
-        if (cart[index].quantity <= 0) {
+            </button>
+
+
+            <div class="checkout-form">
+
+
+                <h2>
+
+                    Finalizar pedido
+
+                </h2>
+
+
+                <p
+                    style="
+                        color:#777;
+                        line-height:1.7;
+                        margin-bottom:25px;
+                    ">
+
+                    Completá tus datos y te enviaremos
+                    el pedido directamente por WhatsApp
+                    para coordinar la compra.
+
+                </p>
+
+
+                <div class="form-group">
+
+
+                    <label>
+
+                        Nombre y apellido
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="customerName"
+                        placeholder="Ej: María Pérez">
+
+                </div>
+
+
+                <div class="form-group">
+
+
+                    <label>
+
+                        Dirección
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="customerAddress"
+                        placeholder="Calle y número">
+
+                </div>
+
+
+                <div class="form-group">
+
+
+                    <label>
+
+                        Localidad
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="customerCity"
+                        placeholder="Ej: Zapala">
+
+                </div>
+
+
+                <div class="form-group">
+
+
+                    <label>
+
+                        ¿Necesitás envío?
+
+                    </label>
+
+
+                    <div class="shipping-options">
+
+
+                        <label class="shipping-option">
+
+                            <input
+                                type="radio"
+                                name="shipping"
+                                value="Sí"
+                                checked>
+
+                            Sí, necesito envío
+
+                        </label>
+
+
+                        <label class="shipping-option">
+
+                            <input
+                                type="radio"
+                                name="shipping"
+                                value="No">
+
+                            No necesito envío
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+
+                    <label>
+
+                        Forma de entrega
+
+                    </label>
+
+
+                    <select
+                        id="deliveryMethod">
+
+                        <option value="A coordinar">
+
+                            A coordinar
+
+                        </option>
+
+
+                        <option value="Correo Argentino">
+
+                            Correo Argentino
+
+                        </option>
+
+
+                        <option value="Vía Cargo">
+
+                            Vía Cargo
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    class="whatsapp-button"
+                    onclick="sendOrderToWhatsApp()">
+
+                    📲 ENVIAR PEDIDO POR WHATSAPP
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ===================================================== -->
+
+    <script>
+
+
+        /* =====================================================
+           PRODUCTOS
+
+           MÁS ADELANTE VAMOS A CARGARLOS ACÁ.
+        ===================================================== */
+
+        const products = [
+
+            /*
+            
+            EJEMPLO:
+
+            {
+                id: 1,
+
+                name: "Zapatilla Ejemplo",
+
+                category: "Zapatillas",
+
+                price: 85000,
+
+                image: "images/zapatilla-ejemplo.jpg",
+
+                description:
+                    "Descripción del producto.",
+
+                sizes: [
+                    "36",
+                    "37",
+                    "38",
+                    "39",
+                    "40"
+                ],
+
+                colors: [
+                    "Blanco",
+                    "Negro"
+                ],
+
+                sizeGuide:
+                    "images/guia-zapatillas.jpg"
+            }
+
+            */
+
+        ];
+
+
+        /* =====================================================
+           VARIABLES
+        ===================================================== */
+
+        let cart = [];
+
+        let selectedProduct = null;
+
+
+        /* =====================================================
+           FORMATO DE PRECIO
+        ===================================================== */
+
+        function formatPrice(price) {
+
+            return new Intl.NumberFormat(
+                'es-AR',
+                {
+                    style: 'currency',
+                    currency: 'ARS',
+                    maximumFractionDigits: 0
+                }
+            ).format(price);
+
+        }
+
+
+        /* =====================================================
+           PRODUCTOS
+        ===================================================== */
+
+        function renderProducts(list = products) {
+
+
+            const grid =
+                document.getElementById(
+                    'productsGrid'
+                );
+
+
+            if (list.length === 0) {
+
+
+                grid.innerHTML = `
+
+                    <div style="
+                        grid-column:1/-1;
+                        text-align:center;
+                        padding:80px 20px;
+                        color:#888;
+                    ">
+
+                        <h3 style="
+                            font-size:24px;
+                            margin-bottom:10px;
+                            color:#333;
+                        ">
+
+                            Próximamente
+
+                        </h3>
+
+
+                        <p>
+
+                            Estamos preparando nuestra
+                            selección de productos para vos. 🤎
+
+                        </p>
+
+                    </div>
+
+                `;
+
+
+                return;
+
+            }
+
+
+            grid.innerHTML =
+
+                list.map(product => `
+
+                    <article
+                        class="product-card">
+
+
+                        <div
+                            class="product-image">
+
+
+                            <img
+                                src="${product.image}"
+                                alt="${product.name}"
+                                onerror="
+                                    this.style.display='none';
+                                    this.nextElementSibling.style.display='block';
+                                ">
+
+
+                            <div
+                                class="product-placeholder"
+                                style="display:none;">
+
+                                Imagen del producto
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div
+                            class="product-info">
+
+
+                            <div
+                                class="product-category">
+
+                                ${product.category}
+
+                            </div>
+
+
+                            <div
+                                class="product-name">
+
+                                ${product.name}
+
+                            </div>
+
+
+                            <div
+                                class="product-price">
+
+                                ${formatPrice(product.price)}
+
+                            </div>
+
+
+                            <button
+                                class="product-button"
+                                onclick="
+                                    openProductModal(
+                                        ${product.id}
+                                    )
+                                ">
+
+                                VER PRODUCTO
+
+                            </button>
+
+
+                        </div>
+
+                    </article>
+
+                `).join('');
+
+        }
+
+
+        /* =====================================================
+           FILTRAR PRODUCTOS
+        ===================================================== */
+
+        function filterProducts(category) {
+
+
+            const filtered =
+                products.filter(
+                    product =>
+                        product.category === category
+                );
+
+
+            document.getElementById(
+                'productsTitle'
+            ).textContent = category;
+
+
+            renderProducts(filtered);
+
+
+            scrollToSection('productos');
+
+        }
+
+
+        /* =====================================================
+           MODAL PRODUCTO
+        ===================================================== */
+
+        function openProductModal(id) {
+
+
+            selectedProduct =
+                products.find(
+                    product =>
+                        product.id === id
+                );
+
+
+            if (!selectedProduct) {
+
+                return;
+
+            }
+
+
+            document.getElementById(
+                'modalImage'
+            ).src =
+                selectedProduct.image;
+
+
+            document.getElementById(
+                'modalName'
+            ).textContent =
+                selectedProduct.name;
+
+
+            document.getElementById(
+                'modalCategory'
+            ).textContent =
+                selectedProduct.category;
+
+
+            document.getElementById(
+                'modalPrice'
+            ).textContent =
+                formatPrice(
+                    selectedProduct.price
+                );
+
+
+            document.getElementById(
+                'modalDescription'
+            ).textContent =
+                selectedProduct.description || '';
+
+
+            const sizeSelect =
+                document.getElementById(
+                    'modalSize'
+                );
+
+
+            sizeSelect.innerHTML =
+
+                selectedProduct.sizes
+                    .map(size => `
+
+                        <option value="${size}">
+
+                            ${size}
+
+                        </option>
+
+                    `)
+                    .join('');
+
+
+            const colorSelect =
+                document.getElementById(
+                    'modalColor'
+                );
+
+
+            colorSelect.innerHTML =
+
+                selectedProduct.colors
+                    .map(color => `
+
+                        <option value="${color}">
+
+                            ${color}
+
+                        </option>
+
+                    `)
+                    .join('');
+
+
+            document.getElementById(
+                'productModal'
+            ).classList.add('active');
+
+        }
+
+
+        function closeProductModal() {
+
+
+            document.getElementById(
+                'productModal'
+            ).classList.remove('active');
+
+        }
+
+
+        /* =====================================================
+           AGREGAR PRODUCTO
+        ===================================================== */
+
+        function addSelectedProductToCart() {
+
+
+            if (!selectedProduct) {
+
+                return;
+
+            }
+
+
+            const size =
+                document.getElementById(
+                    'modalSize'
+                ).value;
+
+
+            const color =
+                document.getElementById(
+                    'modalColor'
+                ).value;
+
+
+            const existing =
+                cart.find(item =>
+
+                    item.product.id ===
+                    selectedProduct.id &&
+
+                    item.size === size &&
+
+                    item.color === color
+
+                );
+
+
+            if (existing) {
+
+                existing.quantity++;
+
+            }
+
+            else {
+
+                cart.push({
+
+                    product: selectedProduct,
+
+                    size: size,
+
+                    color: color,
+
+                    quantity: 1
+
+                });
+
+            }
+
+
+            saveCart();
+
+            updateCart();
+
+            closeProductModal();
+
+            openCart();
+
+        }
+
+
+        /* =====================================================
+           CARRITO
+        ===================================================== */
+
+        function updateCart() {
+
+
+            const container =
+                document.getElementById(
+                    'cartItems'
+                );
+
+
+            const count =
+                cart.reduce(
+                    (total, item) =>
+                        total + item.quantity,
+                    0
+                );
+
+
+            document.getElementById(
+                'cartCount'
+            ).textContent = count;
+
+
+            if (cart.length === 0) {
+
+
+                container.innerHTML = `
+
+                    <div class="empty-cart">
+
+                        <div style="
+                            font-size:40px;
+                        ">
+
+                            🛒
+
+                        </div>
+
+
+                        <p style="
+                            margin-top:15px;
+                        ">
+
+                            Tu carrito está vacío.
+
+                        </p>
+
+                    </div>
+
+                `;
+
+
+                document.getElementById(
+                    'cartTotal'
+                ).textContent = '$0';
+
+
+                return;
+
+            }
+
+
+            container.innerHTML =
+
+                cart.map(
+                    (item, index) => `
+
+                        <div class="cart-item">
+
+
+                            <div class="
+                                cart-item-name">
+
+                                ${item.product.name}
+
+                            </div>
+
+
+                            <div class="
+                                cart-item-details">
+
+                                Talle:
+                                ${item.size}
+
+                                <br>
+
+                                Color:
+                                ${item.color}
+
+                                <br>
+
+                                Precio:
+                                ${formatPrice(
+                                    item.product.price
+                                )}
+
+                            </div>
+
+
+                            <div class="
+                                quantity-controls">
+
+
+                                <button
+                                    onclick="
+                                        changeQuantity(
+                                            ${index},
+                                            -1
+                                        )
+                                    ">
+
+                                    −
+
+                                </button>
+
+
+                                <span>
+
+                                    ${item.quantity}
+
+                                </span>
+
+
+                                <button
+                                    onclick="
+                                        changeQuantity(
+                                            ${index},
+                                            1
+                                        )
+                                    ">
+
+                                    +
+
+                                </button>
+
+
+                            </div>
+
+
+                            <button
+                                class="remove-item"
+                                onclick="
+                                    removeItem(
+                                        ${index}
+                                    )
+                                ">
+
+                                Eliminar
+
+                            </button>
+
+
+                        </div>
+
+                    `
+                ).join('');
+
+
+            const total =
+                cart.reduce(
+                    (sum, item) =>
+                        sum +
+                        (
+                            item.product.price *
+                            item.quantity
+                        ),
+                    0
+                );
+
+
+            document.getElementById(
+                'cartTotal'
+            ).textContent =
+                formatPrice(total);
+
+        }
+
+
+        function changeQuantity(
+            index,
+            amount
+        ) {
+
+
+            cart[index].quantity += amount;
+
+
+            if (
+                cart[index].quantity <= 0
+            ) {
+
+                cart.splice(index, 1);
+
+            }
+
+
+            saveCart();
+
+            updateCart();
+
+        }
+
+
+        function removeItem(index) {
+
 
             cart.splice(index, 1);
 
-        }
+            saveCart();
 
-        saveCart();
+            updateCart();
 
-        updateCart();
-
-    }
-
-
-    function removeItem(index) {
-
-        cart.splice(index, 1);
-
-        saveCart();
-
-        updateCart();
-
-    }
-
-
-    function openCart() {
-
-        document
-            .getElementById('cartPanel')
-            .classList.add('open');
-
-    }
-
-
-    function closeCart() {
-
-        document
-            .getElementById('cartPanel')
-            .classList.remove('open');
-
-    }
-
-
-    /* ==================================================
-       CHECKOUT
-       ================================================== */
-
-    function openCheckout() {
-
-        if (cart.length === 0) {
-
-            alert(
-                'Tu carrito está vacío.'
-            );
-
-            return;
         }
 
 
-        document
-            .getElementById('checkoutModal')
-            .classList.add('active');
-
-    }
+        function openCart() {
 
 
-    function closeCheckout() {
+            document.getElementById(
+                'cartPanel'
+            ).classList.add('open');
 
-        document
-            .getElementById('checkoutModal')
-            .classList.remove('active');
-
-    }
-
-
-    /* ==================================================
-       WHATSAPP
-       ================================================== */
-
-    function sendOrderToWhatsApp() {
-
-        const name =
-            document.getElementById('customerName').value.trim();
-
-        const address =
-            document.getElementById('customerAddress').value.trim();
-
-        const city =
-            document.getElementById('customerCity').value.trim();
-
-        const shipping =
-            document.querySelector(
-                'input[name="shipping"]:checked'
-            ).value;
-
-        const delivery =
-            document.getElementById('deliveryMethod').value;
-
-
-        if (!name || !address || !city) {
-
-            alert(
-                'Por favor completá tu nombre, dirección y localidad.'
-            );
-
-            return;
         }
 
 
-        let message =
-            'Hola Carry Love 🤎 Quiero realizar este pedido:%0A%0A';
+        function closeCart() {
 
 
-        cart.forEach((item, index) => {
+            document.getElementById(
+                'cartPanel'
+            ).classList.remove('open');
 
-            message +=
-                `${index + 1}. ${item.product.name}%0A`;
-
-            message +=
-                `Talle: ${item.size}%0A`;
-
-            message +=
-                `Color: ${item.color}%0A`;
-
-            message +=
-                `Cantidad: ${item.quantity}%0A`;
-
-            message +=
-                `Precio unitario: ${formatPrice(item.product.price)}%0A`;
-
-            message += '%0A';
-
-        });
-
-
-        const total =
-            cart.reduce(
-                (sum, item) =>
-                    sum +
-                    (item.product.price *
-                     item.quantity),
-                0
-            );
-
-
-        message +=
-            `Subtotal: ${formatPrice(total)}%0A%0A`;
-
-        message +=
-            `Nombre y apellido: ${name}%0A`;
-
-        message +=
-            `Dirección: ${address}%0A`;
-
-        message +=
-            `Localidad: ${city}%0A`;
-
-        message +=
-            `Envío: ${shipping}%0A`;
-
-        message +=
-            `Forma de entrega: ${delivery}%0A%0A`;
-
-        message +=
-            'Quedo a la espera para coordinar el pedido. 🤎';
-
-
-        /*
-           Número de WhatsApp de Carry Love.
-
-           Para Argentina, WhatsApp utiliza:
-           54 + 9 + característica + número
-
-           3644 + 162999
-           => 5493644162999
-        */
-
-        const whatsappNumber =
-            '5493644162999';
-
-
-        const url =
-            `https://wa.me/${whatsappNumber}?text=${message}`;
-
-
-        window.open(url, '_blank');
-
-    }
-
-
-    /* ==================================================
-       GUÍA DE TALLES
-       ================================================== */
-
-    function showSizeGuide() {
-
-        if (!selectedProduct ||
-            !selectedProduct.sizeGuide) {
-
-            alert(
-                'La guía de talles estará disponible próximamente.'
-            );
-
-            return;
         }
 
 
-        window.open(
-            selectedProduct.sizeGuide,
-            '_blank'
-        );
+        /* =====================================================
+           CHECKOUT
+        ===================================================== */
 
-    }
-
-
-    /* ==================================================
-       LOCAL STORAGE
-       ================================================== */
-
-    function saveCart() {
-
-        localStorage.setItem(
-            'carryLoveCart',
-            JSON.stringify(cart)
-        );
-
-    }
+        function openCheckout() {
 
 
-    function loadCart() {
+            if (cart.length === 0) {
 
-        const saved =
-            localStorage.getItem(
-                'carryLoveCart'
+
+                alert(
+                    'Tu carrito está vacío.'
+                );
+
+
+                return;
+
+            }
+
+
+            document.getElementById(
+                'checkoutModal'
+            ).classList.add('active');
+
+        }
+
+
+        function closeCheckout() {
+
+
+            document.getElementById(
+                'checkoutModal'
+            ).classList.remove('active');
+
+        }
+
+
+        /* =====================================================
+           WHATSAPP
+        ===================================================== */
+
+        function sendOrderToWhatsApp() {
+
+
+            const name =
+                document.getElementById(
+                    'customerName'
+                ).value.trim();
+
+
+            const address =
+                document.getElementById(
+                    'customerAddress'
+                ).value.trim();
+
+
+            const city =
+                document.getElementById(
+                    'customerCity'
+                ).value.trim();
+
+
+            const shippingElement =
+                document.querySelector(
+                    'input[name="shipping"]:checked'
+                );
+
+
+            const shipping =
+                shippingElement
+                    ? shippingElement.value
+                    : 'No especificado';
+
+
+            const delivery =
+                document.getElementById(
+                    'deliveryMethod'
+                ).value;
+
+
+            if (
+                !name ||
+                !address ||
+                !city
+            ) {
+
+
+                alert(
+                    'Por favor completá tu nombre, dirección y localidad.'
+                );
+
+
+                return;
+
+            }
+
+
+            let message =
+                'Hola Carry Love 🤎 Quiero realizar este pedido:\n\n';
+
+
+            cart.forEach(
+                (item, index) => {
+
+
+                    message +=
+                        `${index + 1}. ${item.product.name}\n`;
+
+
+                    message +=
+                        `Talle: ${item.size}\n`;
+
+
+                    message +=
+                        `Color: ${item.color}\n`;
+
+
+                    message +=
+                        `Cantidad: ${item.quantity}\n`;
+
+
+                    message +=
+                        `Precio unitario: ${formatPrice(
+                            item.product.price
+                        )}\n\n`;
+
+                }
             );
 
-        if (saved) {
 
-            try {
+            const total =
+                cart.reduce(
+                    (sum, item) =>
+                        sum +
+                        (
+                            item.product.price *
+                            item.quantity
+                        ),
+                    0
+                );
 
-                cart = JSON.parse(saved);
 
-            } catch {
+            message +=
+                `Subtotal: ${formatPrice(total)}\n\n`;
 
-                cart = [];
+
+            message +=
+                `Nombre y apellido: ${name}\n`;
+
+
+            message +=
+                `Dirección: ${address}\n`;
+
+
+            message +=
+                `Localidad: ${city}\n`;
+
+
+            message +=
+                `Envío: ${shipping}\n`;
+
+
+            message +=
+                `Forma de entrega: ${delivery}\n\n`;
+
+
+            message +=
+                'Quedo a la espera para coordinar el pedido. 🤎';
+
+
+            const whatsappNumber =
+                '5493644162999';
+
+
+            const whatsappURL =
+                'https://wa.me/' +
+                whatsappNumber +
+                '?text=' +
+                encodeURIComponent(message);
+
+
+            window.open(
+                whatsappURL,
+                '_blank'
+            );
+
+        }
+
+
+        /* =====================================================
+           GUIA DE TALLES
+        ===================================================== */
+
+        function showSizeGuide() {
+
+
+            if (
+                !selectedProduct ||
+                !selectedProduct.sizeGuide
+            ) {
+
+
+                alert(
+                    'La guía de talles estará disponible próximamente.'
+                );
+
+
+                return;
+
+            }
+
+
+            window.open(
+                selectedProduct.sizeGuide,
+                '_blank'
+            );
+
+        }
+
+
+        /* =====================================================
+           GUARDAR CARRITO
+        ===================================================== */
+
+        function saveCart() {
+
+
+            localStorage.setItem(
+                'carryLoveCart',
+                JSON.stringify(cart)
+            );
+
+        }
+
+
+        function loadCart() {
+
+
+            const saved =
+                localStorage.getItem(
+                    'carryLoveCart'
+                );
+
+
+            if (saved) {
+
+
+                try {
+
+                    cart =
+                        JSON.parse(saved);
+
+                }
+
+                catch {
+
+                    cart = [];
+
+                }
+
+            }
+
+
+            updateCart();
+
+        }
+
+
+        /* =====================================================
+           NAVEGACION
+        ===================================================== */
+
+        function scrollToSection(id) {
+
+
+            const section =
+                document.getElementById(id);
+
+
+            if (section) {
+
+
+                section.scrollIntoView({
+                    behavior: 'smooth'
+                });
 
             }
 
         }
 
-        updateCart();
 
-    }
+        /* =====================================================
+           MENU MOBILE
+        ===================================================== */
+
+        function toggleMobileMenu() {
 
 
-    /* ==================================================
-       NAVEGACIÓN
-       ================================================== */
+            const menu =
+                document.getElementById(
+                    'mobileMenu'
+                );
 
-    function scrollToSection(id) {
 
-        const section =
-            document.getElementById(id);
+            if (!menu) {
 
-        if (section) {
+                return;
 
-            section.scrollIntoView({
-                behavior: 'smooth'
-            });
+            }
+
+
+            menu.classList.toggle(
+                'open'
+            );
+
+        }
+
+
+        function closeMobileMenu() {
+
+
+            const menu =
+                document.getElementById(
+                    'mobileMenu'
+                );
+
+
+            if (!menu) {
+
+                return;
+
+            }
+
+
+            menu.classList.remove(
+                'open'
+            );
 
         }
 
-    }
+
+        function mobileNavigate(
+            sectionId
+        ) {
 
 
-    function toggleMobileMenu() {
+            closeMobileMenu();
 
-    const menu = document.getElementById('mobileMenu');
-
-    menu.classList.toggle('open');
-
-}
-
-
-function closeMobileMenu() {
-
-    const menu = document.getElementById('mobileMenu');
-
-    menu.classList.remove('open');
-
-}
-
-
-function mobileNavigate(sectionId) {
-
-    closeMobileMenu();
-
-    scrollToSection(sectionId);
-
-}
-
-
-function mobileFilter(category) {
-
-    closeMobileMenu();
-
-    filterProducts(category);
-
-}
-
-
-    /* ==================================================
-       INICIO
-       ================================================== */
-
-    document.addEventListener(
-        'DOMContentLoaded',
-        function() {
-
-            renderProducts();
-
-            loadCart();
+            scrollToSection(
+                sectionId
+            );
 
         }
-    );
 
-</script>
+
+        function mobileFilter(
+            category
+        ) {
+
+
+            closeMobileMenu();
+
+            filterProducts(
+                category
+            );
+
+        }
+
+
+        /* =====================================================
+           CERRAR MENUS/MODALES AL TOCAR AFUERA
+        ===================================================== */
+
+        document.addEventListener(
+            'click',
+            function(event) {
+
+
+                const productModal =
+                    document.getElementById(
+                        'productModal'
+                    );
+
+
+                const checkoutModal =
+                    document.getElementById(
+                        'checkoutModal'
+                    );
+
+
+                if (
+                    event.target ===
+                    productModal
+                ) {
+
+                    closeProductModal();
+
+                }
+
+
+                if (
+                    event.target ===
+                    checkoutModal
+                ) {
+
+                    closeCheckout();
+
+                }
+
+            }
+        );
+
+
+        /* =====================================================
+           ESCAPE
+        ===================================================== */
+
+        document.addEventListener(
+            'keydown',
+            function(event) {
+
+
+                if (
+                    event.key ===
+                    'Escape'
+                ) {
+
+
+                    closeProductModal();
+
+                    closeCheckout();
+
+                    closeCart();
+
+                    closeMobileMenu();
+
+                }
+
+            }
+        );
+
+
+        /* =====================================================
+           INICIO
+        ===================================================== */
+
+        document.addEventListener(
+            'DOMContentLoaded',
+            function() {
+
+
+                renderProducts();
+
+                loadCart();
+
+
+            }
+        );
+
+    </script>
+
 
 </body>
 </html>
