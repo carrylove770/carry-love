@@ -3749,7 +3749,23 @@
                 document.getElementById(
                     'deliveryMethod'
                 ).value;
+            const paymentElement =
+                document.querySelector(
+                    'input[name="paymentMethod"]:checked'
+                );
 
+
+            const payment =
+                paymentElement
+                    ? paymentElement.value
+                    : 'Tarjeta';
+
+
+            const discountRate =
+                payment === 'Transferencia' ||
+                payment === 'Efectivo'
+                    ? 15
+                    : 0;
 
             if (
                 !name ||
@@ -3801,20 +3817,41 @@
             );
 
 
-            const total =
-                cart.reduce(
+            const subtotal =
+                    cart.reduce(
                     (sum, item) =>
-                        sum +
-                        (
-                            item.product.price *
-                            item.quantity
-                        ),
-                    0
-                );
+                    sum +
+                    (
+                      item.product.price *
+                      item.quantity
+            ),
+        0
+    );
 
 
-            message +=
-                `Subtotal: ${formatPrice(total)}\n\n`;
+const discountAmount =
+    subtotal * (discountRate / 100);
+
+
+const total =
+    subtotal - discountAmount;
+
+
+           message +=
+    `Forma de pago: ${payment}\n`;
+
+message +=
+    `Subtotal: ${formatPrice(subtotal)}\n`;
+
+if (discountAmount > 0) {
+
+    message +=
+        `Descuento: 15% OFF (-${formatPrice(discountAmount)})\n`;
+
+}
+
+message +=
+    `TOTAL: ${formatPrice(total)}\n\n`;
 
 
             message +=
