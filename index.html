@@ -3335,6 +3335,36 @@
             ).textContent =
                 selectedProduct.description || '';
 
+                        const sizeGuideContainer =
+                document.getElementById(
+                    'sizeGuideContainer'
+                );
+
+
+            if (
+                selectedProduct.category === 'Zapatillas'
+            ) {
+
+                sizeGuideContainer.innerHTML = `
+
+                    <button
+                        type="button"
+                        class="size-guide-button"
+                        onclick="openSizeGuide()">
+
+                        📐 VER GUÍA DE TALLES
+
+                    </button>
+
+                `;
+
+            }
+
+            else {
+
+                sizeGuideContainer.innerHTML = '';
+
+            }
 
             const sizeSelect =
                 document.getElementById(
@@ -3939,28 +3969,32 @@ message +=
         function showSizeGuide() {
 
 
-            if (
-                !selectedProduct ||
-                !selectedProduct.sizeGuide
-            ) {
+    if (!selectedProduct) {
+
+        return;
+
+    }
 
 
-                alert(
-                    'La guía de talles estará disponible próximamente.'
-                );
+    if (
+        selectedProduct.category === 'Zapatillas'
+    ) {
+
+        window.open(
+            'images/guia-talles-zapatillas.jpg.jpeg',
+            '_blank'
+        );
+
+        return;
+
+    }
 
 
-                return;
+    alert(
+        'La guía de talles estará disponible próximamente.'
+    );
 
-            }
-
-
-            window.open(
-                selectedProduct.sizeGuide,
-                '_blank'
-            );
-
-        }
+}
 
 
         /* =====================================================
